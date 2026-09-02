@@ -4,7 +4,6 @@ This repository contains two stages of a study of penicillin-concentration estim
 
 The target is **current penicillin concentration in g/L**, not a future concentration forecast. This is an exploratory soft-sensor study using IndPenSim, not a validated plant-control system or a complete digital twin.
 
-Suggested GitHub repository name: **`penicillin-soft-sensor`**. Start with **`notebooks/main.ipynb`** for the final study. For upload decisions, see [UPLOAD_CHECKLIST.md](UPLOAD_CHECKLIST.md).
 
 ## Which notebook should I open?
 
