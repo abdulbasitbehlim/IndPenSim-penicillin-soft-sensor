@@ -1,0 +1,9 @@
+# Python 3.12 recommended. These are the pins in the supplied main.ipynb setup.
+# The saved run metadata separately records NumPy, pandas and scikit-learn.
+numpy==2.3.5
+scipy==1.17.0
+pandas==2.2.3
+scikit-learn==1.8.0
+matplotlib==3.10.8
+seaborn==0.13.2
+joblib==1.5.3
