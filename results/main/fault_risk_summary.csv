@@ -1,0 +1,5 @@
+Measure,Value,Rows
+Normal-row warning rate at probability >= 0.5,0.13855092276144906,102410
+Fault-affected-row sensitivity at probability >= 0.5,0.4926338102808691,9435
+Pre-onset warning rate within fault batches,0.046411483253588515,2090
+Fault-phase ROC AUC within held-out fault batches,0.8434402091368036,11525

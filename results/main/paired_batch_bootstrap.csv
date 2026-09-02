@@ -1,0 +1,3 @@
+Condition,Batches,Mean_RMSE_Difference_Aware_Minus_Normal_Only,Median_RMSE_Difference_Aware_Minus_Normal_Only,Bootstrap_95pct_Lower,Bootstrap_95pct_Upper,Batches_Improved,Proportion_Batches_Improved
+Normal,90,0.017494767419899863,0.014148385089673532,-0.06234031771046974,0.10203113763500772,41,0.45555555555555555
+Fault,10,-0.7063136303546045,-0.5024292046355835,-1.2843566436912401,-0.21936697190506713,8,0.8
