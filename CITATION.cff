@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this software version and the original IndPenSim dataset when using this work. Add the actual public repository or release URL to your citation."
+type: software
+title: "IndPenSim Penicillin Soft Sensor: Batch-Held-Out Evaluation"
+version: 0.1.0
+authors:
+  - family-names: Behlim
+    given-names: Abdul Basit
+abstract: "Two research notebooks for current penicillin-concentration estimation using simulated IndPenSim batches: a normal-trained baseline with five diagnostic experiments, and a normal-only versus fault-inclusive gradient-boosting evaluation."
+license: MIT
+keywords:
+  - IndPenSim
+  - penicillin
+  - soft sensor
+  - batch validation
+  - fermentation
+# Add repository-code and a release DOI only after they actually exist.
+# Data and derived-data licensing are described separately in DATA_SOURCES.md.

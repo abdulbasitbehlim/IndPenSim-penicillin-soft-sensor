@@ -1,0 +1,3 @@
+# Default environment: final main.ipynb notebook.
+# Do not install requirements/baseline.txt into the same environment.
+-r requirements/main.txt

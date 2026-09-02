@@ -1,0 +1,31 @@
+# Local input data; keep the instructions visible.
+/data/raw/*
+!/data/raw/README.md
+/data/splits/*
+!/data/splits/README.md
+
+# New generated runs, trained pickle-based models and archives.
+/outputs/
+*.joblib
+*.pkl
+*.pickle
+*.zip
+
+# Python/Jupyter environments and caches.
+.venv*/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Secrets and local editor/system files.
+.env
+.env.*
+*.pem
+*.key
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
