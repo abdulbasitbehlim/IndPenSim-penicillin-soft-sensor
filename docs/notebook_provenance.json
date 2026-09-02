@@ -1,0 +1,762 @@
+{
+  "purpose": "Repository preparation; not a new experiment or a model-training run.",
+  "notebooks": [
+    {
+      "path": "notebooks/baseline.ipynb",
+      "original_filename": "model.ipynb",
+      "original_file_sha256": "c4b09a7d334c5a6b47e48e72f5c97d1378ea2d0f6991865cbe29dd6b6f28f2aa",
+      "repository_file_sha256": "a09db39abaf587396105ee2734b6c4944279d64012c7c4f2f096caf1166b0b11",
+      "original_cells": 80,
+      "repository_cells": 82,
+      "code_cells": [
+        {
+          "original_cell_index": 2,
+          "repository_cell_id": "model-source-002",
+          "original_source_sha256": "a84e14a573df0ef6fe9452b5187fba34270e673f15dcf1943cec29eada7cb34e",
+          "repository_source_sha256": "a84e14a573df0ef6fe9452b5187fba34270e673f15dcf1943cec29eada7cb34e",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 4,
+          "repository_cell_id": "model-source-004",
+          "original_source_sha256": "306d5452f50d78b2e36c5637248dd31bd8075c2c63b55780040edc6735c36634",
+          "repository_source_sha256": "536d2500ac7896c87b14e4f25b512521a80ebc4b5cee370e5fdba2d8b646bb84",
+          "scientific_source_unchanged": false,
+          "setup_change": "Optional Drive mount"
+        },
+        {
+          "original_cell_index": 5,
+          "repository_cell_id": "model-source-005",
+          "original_source_sha256": "8f19409ae97f36b3d0d3abea1d61fb866163321d230183252a1e4d16c68ef972",
+          "repository_source_sha256": "7f17134cad42992ffe601d6c86964180c030fe17e670e0610d67d6f3b9fd462d",
+          "scientific_source_unchanged": false,
+          "setup_change": "Portable input paths and unique output directory"
+        },
+        {
+          "original_cell_index": 7,
+          "repository_cell_id": "model-source-007",
+          "original_source_sha256": "9f52abb6f2887ef71041b76b6c00435db790d16fb47e831255c3c948201ad48f",
+          "repository_source_sha256": "9f52abb6f2887ef71041b76b6c00435db790d16fb47e831255c3c948201ad48f",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 8,
+          "repository_cell_id": "model-source-008",
+          "original_source_sha256": "a5da6ad72e73ff6aec17d6448c378a9a470b563732b81e8258254c7583201e85",
+          "repository_source_sha256": "a5da6ad72e73ff6aec17d6448c378a9a470b563732b81e8258254c7583201e85",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 10,
+          "repository_cell_id": "model-source-010",
+          "original_source_sha256": "d8ac07a40029ce23411732aee14026a01cb3d3ce2a7963ad97ad0505302375c8",
+          "repository_source_sha256": "d8ac07a40029ce23411732aee14026a01cb3d3ce2a7963ad97ad0505302375c8",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 11,
+          "repository_cell_id": "model-source-011",
+          "original_source_sha256": "ae954c0fe53071bde676f11ddb1ea802b3c15c54d60183e607d7dd1410edb9d6",
+          "repository_source_sha256": "ae954c0fe53071bde676f11ddb1ea802b3c15c54d60183e607d7dd1410edb9d6",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 13,
+          "repository_cell_id": "model-source-013",
+          "original_source_sha256": "377d89f2fc7befcb9d0b67420455ef784ddc62ae0c821c74b0e3c2c908f23fe8",
+          "repository_source_sha256": "377d89f2fc7befcb9d0b67420455ef784ddc62ae0c821c74b0e3c2c908f23fe8",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 15,
+          "repository_cell_id": "model-source-015",
+          "original_source_sha256": "3d9c4814a1cc5c8b12dbbb98451c5872d4368587986003917fa6ad44da3d4502",
+          "repository_source_sha256": "3d9c4814a1cc5c8b12dbbb98451c5872d4368587986003917fa6ad44da3d4502",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 16,
+          "repository_cell_id": "model-source-016",
+          "original_source_sha256": "289fb36c999cff9b7a8338efb5149b5a5db7ef0bab19f87a284dfaaa881c8e64",
+          "repository_source_sha256": "289fb36c999cff9b7a8338efb5149b5a5db7ef0bab19f87a284dfaaa881c8e64",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 18,
+          "repository_cell_id": "model-source-018",
+          "original_source_sha256": "8784e1e5bc900bf22e76acc597b204e6c4f501a4697e7b69dae0769ca076a1f8",
+          "repository_source_sha256": "8784e1e5bc900bf22e76acc597b204e6c4f501a4697e7b69dae0769ca076a1f8",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 19,
+          "repository_cell_id": "model-source-019",
+          "original_source_sha256": "73453a38cee2351a2c863f92195c3c90df73eeb9b21b60046210155d3320495f",
+          "repository_source_sha256": "73453a38cee2351a2c863f92195c3c90df73eeb9b21b60046210155d3320495f",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 21,
+          "repository_cell_id": "model-source-021",
+          "original_source_sha256": "6e2a837531f350bd8c072920855204a2220fe090913cff2133d076e457cad72b",
+          "repository_source_sha256": "6e2a837531f350bd8c072920855204a2220fe090913cff2133d076e457cad72b",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 23,
+          "repository_cell_id": "model-source-023",
+          "original_source_sha256": "3adbe05510442ba7ed12b15304ce4874228e9d865ab63c8b3410c7a14191c485",
+          "repository_source_sha256": "3adbe05510442ba7ed12b15304ce4874228e9d865ab63c8b3410c7a14191c485",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 24,
+          "repository_cell_id": "model-source-024",
+          "original_source_sha256": "8bbfcc29d449ed044de9d8b26096eb5f9810c14efe22ee78730af6362964e6fc",
+          "repository_source_sha256": "8bbfcc29d449ed044de9d8b26096eb5f9810c14efe22ee78730af6362964e6fc",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 26,
+          "repository_cell_id": "model-source-026",
+          "original_source_sha256": "a4165c0a0b6f2a53b138694afe03d3f094d116efa797063ebe035f59a48cb05f",
+          "repository_source_sha256": "a4165c0a0b6f2a53b138694afe03d3f094d116efa797063ebe035f59a48cb05f",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 28,
+          "repository_cell_id": "model-source-028",
+          "original_source_sha256": "87595b1ef7e152fd03649017d5179346ebc083e04554a65bb0e2ff2a5a880204",
+          "repository_source_sha256": "87595b1ef7e152fd03649017d5179346ebc083e04554a65bb0e2ff2a5a880204",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 29,
+          "repository_cell_id": "model-source-029",
+          "original_source_sha256": "1ea0dfc3ee4944a6002c129e68e223722863a77adefd1fbe3838cd3a3609c59a",
+          "repository_source_sha256": "1ea0dfc3ee4944a6002c129e68e223722863a77adefd1fbe3838cd3a3609c59a",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 31,
+          "repository_cell_id": "model-source-031",
+          "original_source_sha256": "a169f243445dab0a14e5ea078c21d986a44ac2d636b2cfe8fd850df740fb5710",
+          "repository_source_sha256": "a169f243445dab0a14e5ea078c21d986a44ac2d636b2cfe8fd850df740fb5710",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 32,
+          "repository_cell_id": "model-source-032",
+          "original_source_sha256": "85e2e582c53fc30e6f9ea3fe1479fdd9c0af404682f64a7a52082796c3a308b7",
+          "repository_source_sha256": "85e2e582c53fc30e6f9ea3fe1479fdd9c0af404682f64a7a52082796c3a308b7",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 33,
+          "repository_cell_id": "model-source-033",
+          "original_source_sha256": "1b7d450f439dcde23c6c668f297462464ea8129ec7b0a6ecfebfb243013a9f5e",
+          "repository_source_sha256": "1b7d450f439dcde23c6c668f297462464ea8129ec7b0a6ecfebfb243013a9f5e",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 35,
+          "repository_cell_id": "model-source-035",
+          "original_source_sha256": "8a0dda6d418c4a17c2857da731fa7cd92a1aa49f65aa67ec3587d2fa7fd74666",
+          "repository_source_sha256": "8a0dda6d418c4a17c2857da731fa7cd92a1aa49f65aa67ec3587d2fa7fd74666",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 37,
+          "repository_cell_id": "model-source-037",
+          "original_source_sha256": "9192458d21569188867ebde1b182da3ec738805abdd3be316c1b2eeec9daa04d",
+          "repository_source_sha256": "9192458d21569188867ebde1b182da3ec738805abdd3be316c1b2eeec9daa04d",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 38,
+          "repository_cell_id": "model-source-038",
+          "original_source_sha256": "ad502383f529808a0ae8712bd55648afa02f0cac0a3f82e42cb50207ceec24f1",
+          "repository_source_sha256": "ad502383f529808a0ae8712bd55648afa02f0cac0a3f82e42cb50207ceec24f1",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 40,
+          "repository_cell_id": "model-source-040",
+          "original_source_sha256": "755cedc30987c9a96e7ec01ad52e28ad542ad4d018f258901eadf6ee09536115",
+          "repository_source_sha256": "755cedc30987c9a96e7ec01ad52e28ad542ad4d018f258901eadf6ee09536115",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 41,
+          "repository_cell_id": "model-source-041",
+          "original_source_sha256": "6e2217cd9b1daf470095827224b29adb3a1da7cc6eb57b375e2103e10898c85c",
+          "repository_source_sha256": "6e2217cd9b1daf470095827224b29adb3a1da7cc6eb57b375e2103e10898c85c",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 43,
+          "repository_cell_id": "model-source-043",
+          "original_source_sha256": "95c9e28369bda718f611e0a30de6c65717b922d021ed24c87f9983fbcddef786",
+          "repository_source_sha256": "95c9e28369bda718f611e0a30de6c65717b922d021ed24c87f9983fbcddef786",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 44,
+          "repository_cell_id": "model-source-044",
+          "original_source_sha256": "2ca4f86f56d7ac498c6e4b7cc7020afc02c3147b316644a14189ffdcdf8deece",
+          "repository_source_sha256": "2ca4f86f56d7ac498c6e4b7cc7020afc02c3147b316644a14189ffdcdf8deece",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 46,
+          "repository_cell_id": "model-source-046",
+          "original_source_sha256": "e175b1a4eafe6db5857ad9babc9c472b14c9f54b8ed764941e1c6fe659bd920d",
+          "repository_source_sha256": "e175b1a4eafe6db5857ad9babc9c472b14c9f54b8ed764941e1c6fe659bd920d",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 48,
+          "repository_cell_id": "model-source-048",
+          "original_source_sha256": "11f4e4609c4492afccce02691995c2c47d43b13dce3e0702edf429d9876515ae",
+          "repository_source_sha256": "11f4e4609c4492afccce02691995c2c47d43b13dce3e0702edf429d9876515ae",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 52,
+          "repository_cell_id": "model-source-052",
+          "original_source_sha256": "d53fffc17d1595820993e7a2cf4a7d74b796b006a7155dfee133e28438ba8282",
+          "repository_source_sha256": "d53fffc17d1595820993e7a2cf4a7d74b796b006a7155dfee133e28438ba8282",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 54,
+          "repository_cell_id": "model-source-054",
+          "original_source_sha256": "ed8fd9a9e27893ba8bf946e093be48e75bcc36dd1caf2bd232de97f8fa20ae1f",
+          "repository_source_sha256": "ed8fd9a9e27893ba8bf946e093be48e75bcc36dd1caf2bd232de97f8fa20ae1f",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 55,
+          "repository_cell_id": "model-source-055",
+          "original_source_sha256": "ee1bd69be9aa7a836ccf1e8b9101661b7f66d76bae393f1c00ec7b6a310aaa94",
+          "repository_source_sha256": "ee1bd69be9aa7a836ccf1e8b9101661b7f66d76bae393f1c00ec7b6a310aaa94",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 56,
+          "repository_cell_id": "model-source-056",
+          "original_source_sha256": "36ff8a6d6a11e20650496db4f66f4a02739af1b082e731cd91cc7dc08654a021",
+          "repository_source_sha256": "36ff8a6d6a11e20650496db4f66f4a02739af1b082e731cd91cc7dc08654a021",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 59,
+          "repository_cell_id": "model-source-059",
+          "original_source_sha256": "57ab89fc3901e33222f2c5418a94ba293d0b0c54cf77be8a34b9c0e9c861c2c3",
+          "repository_source_sha256": "57ab89fc3901e33222f2c5418a94ba293d0b0c54cf77be8a34b9c0e9c861c2c3",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 60,
+          "repository_cell_id": "model-source-060",
+          "original_source_sha256": "c0cb19c22808b79d674b0b631ca3722a608b9a2ebfc108322502eb67f7c164ef",
+          "repository_source_sha256": "c0cb19c22808b79d674b0b631ca3722a608b9a2ebfc108322502eb67f7c164ef",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 63,
+          "repository_cell_id": "model-source-063",
+          "original_source_sha256": "b99c3851aa24f4e1389ce685be37638768e4715e2b7a0734ee8091bf2914b0ac",
+          "repository_source_sha256": "b99c3851aa24f4e1389ce685be37638768e4715e2b7a0734ee8091bf2914b0ac",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 64,
+          "repository_cell_id": "model-source-064",
+          "original_source_sha256": "e3819b32e62c51499dcdbbf775e40e8966268f86be50a99a9c755b38b12caab6",
+          "repository_source_sha256": "e3819b32e62c51499dcdbbf775e40e8966268f86be50a99a9c755b38b12caab6",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 65,
+          "repository_cell_id": "model-source-065",
+          "original_source_sha256": "22a1ef115ba678913a8b0085d877ea135025c8c1b7bcb4d4686cada6adf3e1e5",
+          "repository_source_sha256": "22a1ef115ba678913a8b0085d877ea135025c8c1b7bcb4d4686cada6adf3e1e5",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 68,
+          "repository_cell_id": "model-source-068",
+          "original_source_sha256": "72fce57ee0d65044e65a8a2fd092a42a5fc72c3b527384503d96f429bd6806fb",
+          "repository_source_sha256": "72fce57ee0d65044e65a8a2fd092a42a5fc72c3b527384503d96f429bd6806fb",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 69,
+          "repository_cell_id": "model-source-069",
+          "original_source_sha256": "dd18ddd99ed83d0b1a2d14cbaca3ad4099e7f3c1c07a83877f432da86dc7f1e5",
+          "repository_source_sha256": "dd18ddd99ed83d0b1a2d14cbaca3ad4099e7f3c1c07a83877f432da86dc7f1e5",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 72,
+          "repository_cell_id": "model-source-072",
+          "original_source_sha256": "f1c5884e099a1f08877e639ba506c2ee06b709baa46c2aed4a0db3719d74223c",
+          "repository_source_sha256": "f1c5884e099a1f08877e639ba506c2ee06b709baa46c2aed4a0db3719d74223c",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 73,
+          "repository_cell_id": "model-source-073",
+          "original_source_sha256": "b1090a8b84230c4bc16c4f85e52100fcfc5e34814531b51fb9dc595f6cc61674",
+          "repository_source_sha256": "b1090a8b84230c4bc16c4f85e52100fcfc5e34814531b51fb9dc595f6cc61674",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 75,
+          "repository_cell_id": "model-source-075",
+          "original_source_sha256": "91255afb2ab0f364fd9bdd2872c0dc2a4b683895d5ec43949eead898ef53e2d6",
+          "repository_source_sha256": "91255afb2ab0f364fd9bdd2872c0dc2a4b683895d5ec43949eead898ef53e2d6",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 76,
+          "repository_cell_id": "model-source-076",
+          "original_source_sha256": "0708e11b90db488a07b16b3731dd4259d1c55ec3c45bf2e124cbaa4c426abccb",
+          "repository_source_sha256": "0708e11b90db488a07b16b3731dd4259d1c55ec3c45bf2e124cbaa4c426abccb",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 79,
+          "repository_cell_id": "model-source-079",
+          "original_source_sha256": "44fdc1f73f14dc6bb02d1a557762b18a52a035a4733af514b13c85dfcfa5808d",
+          "repository_source_sha256": "44fdc1f73f14dc6bb02d1a557762b18a52a035a4733af514b13c85dfcfa5808d",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        }
+      ],
+      "previous_repository_path": "notebooks/model.ipynb"
+    },
+    {
+      "path": "notebooks/main.ipynb",
+      "original_filename": "ML_4.ipynb",
+      "original_file_sha256": "ba72cd6a2e90abb9c94e5ab38e1c2654197b765807491e58dceafdddb65277f9",
+      "repository_file_sha256": "59230b926d089b539d7bf5e5f1a27431059abd07e0b2c6263ab9c0d71c7a25ef",
+      "original_cells": 28,
+      "repository_cells": 28,
+      "code_cells": [
+        {
+          "original_cell_index": 2,
+          "repository_cell_id": "ml4-source-002",
+          "original_source_sha256": "87227e020217ad08937932cebd7907d179bd3e6b2b2abc0cf0c18fc8121a98e1",
+          "repository_source_sha256": "75024c0f568939a132ed726ef8e64b586893ae7208be1717397dc4031094a3e0",
+          "scientific_source_unchanged": false,
+          "setup_change": "Conditional dependency installation/version check"
+        },
+        {
+          "original_cell_index": 4,
+          "repository_cell_id": "ml4-source-004",
+          "original_source_sha256": "9b81719f79aa92d117fe03c11a7037fa41bd491d292d6a6cca06becc996f115a",
+          "repository_source_sha256": "536d2500ac7896c87b14e4f25b512521a80ebc4b5cee370e5fdba2d8b646bb84",
+          "scientific_source_unchanged": false,
+          "setup_change": "Optional Drive mount"
+        },
+        {
+          "original_cell_index": 6,
+          "repository_cell_id": "ml4-source-006",
+          "original_source_sha256": "cdade521e629f3b2f8b883bbda8dfeb3c14434727b5fe284510ce732b2fb83e2",
+          "repository_source_sha256": "63536cd493624cccc9abde12f3d3f0dc6ea9a7d82f5eaa6d9e2138bd4b168d4a",
+          "scientific_source_unchanged": false,
+          "setup_change": "Portable input paths and unique output directory"
+        },
+        {
+          "original_cell_index": 8,
+          "repository_cell_id": "ml4-source-008",
+          "original_source_sha256": "49d37dab8f708df138f858beb3daba9f33d00c142f101f4a4ec3227cbc04e890",
+          "repository_source_sha256": "49d37dab8f708df138f858beb3daba9f33d00c142f101f4a4ec3227cbc04e890",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 9,
+          "repository_cell_id": "ml4-source-009",
+          "original_source_sha256": "4b63940e1153415c6edd7d5e0f3efc3d20a6dc696ea86d2049c297551c8adc45",
+          "repository_source_sha256": "4b63940e1153415c6edd7d5e0f3efc3d20a6dc696ea86d2049c297551c8adc45",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 10,
+          "repository_cell_id": "ml4-source-010",
+          "original_source_sha256": "f44552637443ac14cda0d85a0ed689dea30d926639db14d8d168045509a56a33",
+          "repository_source_sha256": "f44552637443ac14cda0d85a0ed689dea30d926639db14d8d168045509a56a33",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 11,
+          "repository_cell_id": "ml4-source-011",
+          "original_source_sha256": "011fa0990dfb613dd9714838e35a88a76ab45b215e8ba6ae961449990bf773d5",
+          "repository_source_sha256": "011fa0990dfb613dd9714838e35a88a76ab45b215e8ba6ae961449990bf773d5",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 12,
+          "repository_cell_id": "ml4-source-012",
+          "original_source_sha256": "037b82f6e0758c27735be45b7aeb86ed254bdc923715e604cd65fd5503eed749",
+          "repository_source_sha256": "037b82f6e0758c27735be45b7aeb86ed254bdc923715e604cd65fd5503eed749",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 13,
+          "repository_cell_id": "ml4-source-013",
+          "original_source_sha256": "34c904540d2cba1fc34aa6690daa2b0b287b708c281cea537b08deaa9deff05c",
+          "repository_source_sha256": "34c904540d2cba1fc34aa6690daa2b0b287b708c281cea537b08deaa9deff05c",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 14,
+          "repository_cell_id": "ml4-source-014",
+          "original_source_sha256": "4ef009360131682ef0ee31b48448a4ba8cea228dc610529635db469c38141340",
+          "repository_source_sha256": "4ef009360131682ef0ee31b48448a4ba8cea228dc610529635db469c38141340",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 16,
+          "repository_cell_id": "ml4-source-016",
+          "original_source_sha256": "77853675c3c9c56d1abfa572fb01105924f2c3b36dbdf79a71d85211ab688da4",
+          "repository_source_sha256": "77853675c3c9c56d1abfa572fb01105924f2c3b36dbdf79a71d85211ab688da4",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 18,
+          "repository_cell_id": "ml4-source-018",
+          "original_source_sha256": "1fafc7d942efc9949914d1f617f0ef8044e733d9bedb10a365b7925465afbb25",
+          "repository_source_sha256": "1fafc7d942efc9949914d1f617f0ef8044e733d9bedb10a365b7925465afbb25",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 20,
+          "repository_cell_id": "ml4-source-020",
+          "original_source_sha256": "6390c29837ba5d37f58bc18aab436bf84b2ca6ae527cd3e089f7c53ef40b1805",
+          "repository_source_sha256": "6390c29837ba5d37f58bc18aab436bf84b2ca6ae527cd3e089f7c53ef40b1805",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 22,
+          "repository_cell_id": "ml4-source-022",
+          "original_source_sha256": "acd4507aecc8235c39bd34c295d5188b6774994cba4022b66ec5b1b14d360f19",
+          "repository_source_sha256": "acd4507aecc8235c39bd34c295d5188b6774994cba4022b66ec5b1b14d360f19",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        },
+        {
+          "original_cell_index": 24,
+          "repository_cell_id": "ml4-source-024",
+          "original_source_sha256": "33ba7b56fe579895e94b608103cd65ea6a21b10a44af48247c7c9639c51f5081",
+          "repository_source_sha256": "ced400a159c5b9adbad32cb33f9481ac4dccd4b0f02ca639579b4a6eee71c199",
+          "scientific_source_unchanged": false,
+          "setup_change": "Portable ZIP creation; optional Colab download"
+        },
+        {
+          "original_cell_index": 26,
+          "repository_cell_id": "ml4-source-026",
+          "original_source_sha256": "dc88f54b2c072319ee979850209440ad9e83b3c781c6e6845447f309b51dbe83",
+          "repository_source_sha256": "dc88f54b2c072319ee979850209440ad9e83b3c781c6e6845447f309b51dbe83",
+          "scientific_source_unchanged": true,
+          "setup_change": null
+        }
+      ],
+      "previous_repository_path": "notebooks/ML_4.ipynb"
+    }
+  ],
+  "archived_results": [
+    {
+      "path": "results/baseline/fault_aware_batch_split.json",
+      "sha256": "2f1fc522d1257806fb00a48066cd26954dac9ffdcc27af2fba9a2531471b1d85",
+      "run": "earlier"
+    },
+    {
+      "path": "results/baseline/fault_aware_batch_split_table.csv",
+      "sha256": "3ba60f3801557dc5148bebd2a0832ef778a216f3cc941eacc1992df265ba039a",
+      "run": "earlier"
+    },
+    {
+      "path": "results/baseline/fault_test_metrics_by_batch.csv",
+      "sha256": "8b384bd0c7102ed73931cce9c37d5b0835e686c8e7044e287bc8c53ec94570ca",
+      "run": "earlier"
+    },
+    {
+      "path": "results/baseline/model_information.json",
+      "sha256": "65c4ab86dde51cc5b1800dcd21dcc6c6d11b4e55545f81c884fd2a2f8cdc9c3b",
+      "run": "earlier"
+    },
+    {
+      "path": "results/baseline/normal_and_fault_test_results.csv",
+      "sha256": "b218e9f4968f9993285bc2403598590fbb3443290c78fe1c4b5ae38a85bba805",
+      "run": "earlier"
+    },
+    {
+      "path": "results/baseline/normal_test_metrics_by_batch.csv",
+      "sha256": "e262d7352f98ce78e2670185cd59941438659c576247b2f5aec503596c994d98",
+      "run": "earlier"
+    },
+    {
+      "path": "results/baseline/row_split_summary.csv",
+      "sha256": "324584784a8c4b7405c13cf8367af1dfb846036aa2b53451122a95e8359eb26a",
+      "run": "earlier"
+    },
+    {
+      "path": "results/baseline/validation_results.csv",
+      "sha256": "27960703ae4c4ea15ec2c7deeeb61c13c76ee55e767b3f2b2669b4e8eb1040cd",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_1_repeated_batch_cv_fold_metrics.csv",
+      "sha256": "8f045df69871ea9b5e2829e6c604ebe6d3733d1aac3efeb4a3cfd49c1e8284e3",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_1_repeated_batch_cv_summary.csv",
+      "sha256": "5979645cbf2e69f69305bcf91b2fa68671250328fdeb083cb1f6eb3d7f1da997",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_2_time_feed_ablation.csv",
+      "sha256": "7a86529a9b9787381fc1df0c6c43feca4d686756376b69d9a9efa8e70091aff7",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_2_time_feed_ablation_by_batch.csv",
+      "sha256": "1b054e0d7c2e518030ede6316d5d115b5816a4c324f7fad9e04cdbd7395f8cdd",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_3_fault_onset_audit.csv",
+      "sha256": "510a0b956a1338572b5174d1125502c17e9ef4204bcda80f5836490c66cb35b4",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_3_fault_phase_by_batch.csv",
+      "sha256": "595a6694cf5c5dcd991320a6eb47a910258f3141d2e49f62bfbc1cb6fe1de734",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_3_fault_phase_overall.csv",
+      "sha256": "9bfc1c270d69b7ed402d0762afa1ebb8444e9827dadf33832b8f04b4b608b20d",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_4_fault_degradation.csv",
+      "sha256": "010f299ddf2f515408cdfff14e5988530ad6cfef3affb7fb4657f28b608679d9",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_4_model_comparison_by_batch.csv",
+      "sha256": "82eca661a1bb0b747e5351ad7a915e8c3e80233870bf902a3d1cc6f248390a70",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_4_model_comparison_test.csv",
+      "sha256": "20c977559e5ab6241f49a3ffc9f2ac0fd36af2bb08da77a0d65ad51a7f1c132e",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_4_model_comparison_validation.csv",
+      "sha256": "813f0e2529486c30a16384537c8d5aacc98a91865d6d06c583df60969f75e6d8",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_5_early_ood_scores.csv",
+      "sha256": "b42860bded6ae3b94faa72636bee08606d661cdce25dd021cd1a7f298926cfdb",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_5_fault_ood_earliest_detection.csv",
+      "sha256": "d201f06c9401d6129a18aaf2983724f118ec4c64088de0a3942a0e53bfbc90e4",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_5_ood_evaluation_summary.csv",
+      "sha256": "1a915ad46e162b0a8d07f733729121e0fe92fae4e2b1a8b49170c291529a29e8",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_5_ood_model_audit.csv",
+      "sha256": "4f9b764e17a4806c2595c4b324057a3f1cf84e98411eaafae21fccce5752c322",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_5_ood_uncertainty_by_batch.csv",
+      "sha256": "d9eb066628a0b40c51bbae47397a3e1959fbd1f4eaaa5e8098c8279a3f5944f9",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_5_uncertainty_by_batch.csv",
+      "sha256": "5aaab21c9f0c3f755977dde16b45147fa0e93f0caf7da09ce9a80908b90e690d",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_5_uncertainty_summary.csv",
+      "sha256": "dc97bd52eb214de1824cfc2ebb5dbc788c3a8bf86777f763c404ef4075ed08ca",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/experiment_configuration.json",
+      "sha256": "5634cdea342ebef460a698a22ebf14e3f7a253080ebb131466455aa6d80914f0",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/figure_experiment_1_cv_distribution.png",
+      "sha256": "9fbf9f702ba36e2ee173b1b32c4dad72cc8b624b7d76d4c4f0788ece4dd3056e",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/figure_experiment_2_time_feed_ablation.png",
+      "sha256": "52ed74f4e60aadd283d670e239ec5db1108a0e78b4ca6b77e34224fd1e894d6c",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/figure_experiment_3_fault_phase_mae.png",
+      "sha256": "85ac4364324bd1f19db65d62552a65298daecdaaa2b4a761a66500ea17549fa6",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/figure_experiment_4_model_comparison.png",
+      "sha256": "4f2453a678286ce3c4f35ee77b8688c8f55f98ff41d40d69cee9ed4df8eeb0a2",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/figure_experiment_5_fault_ood_heatmap.png",
+      "sha256": "90e810859295f4cd7966a48a206c40871afe751707c952505368b98119e3f18a",
+      "run": "earlier"
+    },
+    {
+      "path": "results/experiments/figure_experiment_5_ood_vs_batch_rmse.png",
+      "sha256": "83981c1dba1e2ab508d46f849749a9c9d31cdf94038eeb8fe0fe72f382eb2d97",
+      "run": "earlier"
+    },
+    {
+      "path": "results/ml4/batch_100_held_out_trajectory.png",
+      "sha256": "4fe18149d65ff8b96a812537fc076371b05cbb17f4020892b5b0beb82909444c",
+      "run": "ML_4_full"
+    },
+    {
+      "path": "results/ml4/cross_validated_batch_metrics.csv",
+      "sha256": "e17ebe24e1dd30cf7c6089ade22908b4b24d840519c695995f9979aad9d03db1",
+      "run": "ML_4_full"
+    },
+    {
+      "path": "results/ml4/cross_validated_overall_metrics.csv",
+      "sha256": "4adacef149d3d02eab61642d54b21d029715bf604a2095826ad04f3dd05bad0b",
+      "run": "ML_4_full"
+    },
+    {
+      "path": "results/ml4/cross_validated_predictions.csv",
+      "sha256": "7603a50c6fc5056a0b1911e096eea08b6a5235c26297dec1d9a6e8868e1802e2",
+      "run": "ML_4_full"
+    },
+    {
+      "path": "results/ml4/deployment_reliability_by_batch.csv",
+      "sha256": "62101a3dfa8dcd79856046600af6af961fb24f9fd076fbf873afc90a6e4ea864",
+      "run": "ML_4_full"
+    },
+    {
+      "path": "results/ml4/fault_risk_summary.csv",
+      "sha256": "64d3fdcdec8d8069dcb65e59f76c40c6cc250943998c7bed8e75277fc9e0ad82",
+      "run": "ML_4_full"
+    },
+    {
+      "path": "results/ml4/figure_1_rmse_comparison.png",
+      "sha256": "1e197964c3ccde5d6439276740fd191e568af7d3404616717ea9ccd2604434cd",
+      "run": "ML_4_full"
+    },
+    {
+      "path": "results/ml4/figure_2_fault_batch_rmse.png",
+      "sha256": "06118dc4297fe2805dd27e75e685fb1f74c2b4ee1060c8f9c97604e4c11da83d",
+      "run": "ML_4_full"
+    },
+    {
+      "path": "results/ml4/figure_3_fault_actual_vs_predicted.png",
+      "sha256": "5d5f12afffd71b99327ce32e769f58549396e9af38da13e026564ce7ae3129f4",
+      "run": "ML_4_full"
+    },
+    {
+      "path": "results/ml4/figure_4_fault_risk_by_phase.png",
+      "sha256": "e14a967ee525cde9ee595ecc8983df5eacbfb2bc2fd190cc47766fb0506d1f7d",
+      "run": "ML_4_full"
+    },
+    {
+      "path": "results/ml4/paired_batch_bootstrap.csv",
+      "sha256": "029eb1e99e81adff4fe362508fcd97fabe9b1758dd2c52d3d1877c9cb2bb8e73",
+      "run": "ML_4_full"
+    },
+    {
+      "path": "results/ml4/run_metadata.json",
+      "sha256": "28be0b6412bb8386c13893215944d55e1950c15aea1f2564e155de2cd15093ea",
+      "run": "ML_4_full"
+    }
+  ],
+  "licence": "MIT for original code/documentation; data attribution in DATA_SOURCES.md",
+  "naming_update": {
+    "repository_name": "penicillin-soft-sensor",
+    "original_to_public_notebook": {
+      "model.ipynb": "notebooks/baseline.ipynb",
+      "ML_4.ipynb": "notebooks/main.ipynb"
+    },
+    "changes": "Names, documentation, requirement references and setup output-directory labels only.",
+    "scientific_code_changed": false,
+    "archived_results_changed": false,
+    "models_retrained": false
+  }
+}
