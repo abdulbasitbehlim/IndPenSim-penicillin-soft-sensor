@@ -8,7 +8,7 @@ The supplied `model.ipynb` is now `notebooks/baseline.ipynb`; the supplied `ML_4
 
 ## Changes made for this repository
 
-- Renamed the public notebooks to `baseline.ipynb` and `main.ipynb`, with matching requirement files and output-directory labels. The archived `results/ml4/` directory retains its historical run label for traceability.
+- Renamed the repository notebooks to `baseline.ipynb` and `main.ipynb`, with matching requirement files and output-directory labels. The final-study archive is now in `results/main/`; the original filenames and content hashes remain recorded for traceability.
 - Cleared saved execution outputs and execution counts. The original uploaded notebooks remain the evidence-bearing executed copies; checked-in CSVs and PNGs preserve selected completed-run outputs.
 - Removed private Drive locations and stale notebook UI/execution metadata.
 - Added a dependency check/install cell to the earlier notebook and made the `main.ipynb` installer conditional. Colab may install its required versions; local Jupyter asks the user to install through the environment's requirements file.
@@ -19,6 +19,8 @@ The supplied `model.ipynb` is now `notebooks/baseline.ipynb`; the supplied `ML_4
 - Clarified introductory Markdown and removed a stale claim that the uploaded `main.ipynb` file had no prefilled outputs. Its repository copy now genuinely has none.
 
 No feature-engineering, split, model-fitting, weighting, prediction, metric, bootstrap or OOD calculation was rewritten. All non-setup code cells are checked byte-for-byte at the source-text level against their recorded originals. This packaging step did not rerun the full experiments or replace their saved numerical results.
+
+The subsequent documentation maintenance corrected repository paths and explanatory Markdown links, restored original notebook-output figures, and repaired test discovery. Every notebook code cell was preserved. The [figure provenance record](figure_provenance.json) identifies each original plot and its source notebook output. These maintenance changes do not constitute a new experimental run.
 
 ## Environments
 

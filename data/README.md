@@ -47,6 +47,6 @@ Use your own file's actual path. If you set `MOUNT_GOOGLE_DRIVE = False`, choose
 
 ## Keep data and generated files out of ordinary commits
 
-The source dataset remains separately licensed; see [DATA_SOURCES.md](../DATA_SOURCES.md). Raw files and newly generated outputs are ignored by local Git. A browser upload does not act as a privacy filter: select only the intended repository files, and never drag your populated data directory into GitHub.
+The source dataset remains separately licensed; see [DATA_SOURCES.md](../DATA_SOURCES.md). Raw files and newly generated outputs are ignored by local Git. Keep credentials and private data out of the repository. Completed runs should be reviewed before selecting outputs for the research archive.
 
-The checked-in `results/ml4/cross_validated_predictions.csv` contains derived evaluation rows from simulated data. It is not a copy of the full raw process/Raman dataset.
+The checked-in `results/main/cross_validated_predictions.csv` contains derived evaluation rows from simulated data. It is not a copy of the full raw process/Raman dataset.

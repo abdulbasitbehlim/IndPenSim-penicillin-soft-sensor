@@ -44,7 +44,7 @@ class RepositoryChecks(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.provenance = json.loads((ROOT / "docs/notebook_provenance.json").read_text(encoding="utf-8"))
-        cls.predictions = read_csv("results/ml4/cross_validated_predictions.csv")
+        cls.predictions = read_csv("results/main/cross_validated_predictions.csv")
         cls.by_condition = defaultdict(list)
         cls.by_batch = defaultdict(list)
         for row in cls.predictions:
@@ -57,9 +57,9 @@ class RepositoryChecks(unittest.TestCase):
 
     def test_required_files_and_licence(self):
         for name in [
-            "README.md", "UPLOAD_CHECKLIST.md", "LICENSE", "CITATION.cff", "DATA_SOURCES.md", ".gitignore",
+            "README.md", "LICENSE", "CITATION.cff", "DATA_SOURCES.md", ".gitignore",
             ".gitattributes", "requirements.txt", "requirements/baseline.txt", "requirements/main.txt",
-            "notebooks/baseline.ipynb", "notebooks/main.ipynb", "docs/GITHUB_UPLOAD_GUIDE.md",
+            "notebooks/baseline.ipynb", "notebooks/main.ipynb", "docs/FIGURES.md",
             "docs/REPRODUCIBILITY.md", "docs/RESULTS_GUIDE.md", "data/raw/README.md", "data/splits/README.md",
         ]:
             self.assertTrue((ROOT / name).is_file(), name)
@@ -136,7 +136,7 @@ class RepositoryChecks(unittest.TestCase):
             self.assertEqual(fold_batches[f"Fault LOBO {batch}"], {batch})
 
     def test_pooled_metric_arithmetic(self):
-        overall = read_csv("results/ml4/cross_validated_overall_metrics.csv")
+        overall = read_csv("results/main/cross_validated_overall_metrics.csv")
         self.assertEqual(len(overall), 4)
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         for row in overall:
@@ -146,7 +146,7 @@ class RepositoryChecks(unittest.TestCase):
                 self.assertIn(f"{float(row[name]):.4f}", readme)
 
     def test_individual_batch_metric_arithmetic(self):
-        batch_metrics = read_csv("results/ml4/cross_validated_batch_metrics.csv")
+        batch_metrics = read_csv("results/main/cross_validated_batch_metrics.csv")
         self.assertEqual(len(batch_metrics), 200)
         for row in batch_metrics:
             data = self.by_batch[int(row["Batch_ID"])]
@@ -156,9 +156,9 @@ class RepositoryChecks(unittest.TestCase):
                 self.assertTrue(math.isclose(value, float(row[name]), abs_tol=1e-9, rel_tol=1e-9))
 
     def test_paired_batch_summary(self):
-        rows = read_csv("results/ml4/cross_validated_batch_metrics.csv")
+        rows = read_csv("results/main/cross_validated_batch_metrics.csv")
         lookup = {(int(r["Batch_ID"]), r["Model"]): float(r["RMSE"]) for r in rows}
-        for summary in read_csv("results/ml4/paired_batch_bootstrap.csv"):
+        for summary in read_csv("results/main/paired_batch_bootstrap.csv"):
             batches = range(1, 91) if summary["Condition"] == "Normal" else range(91, 101)
             differences = [lookup[b, "Fault-aware HGB"] - lookup[b, "Normal-only HGB"] for b in batches]
             self.assertEqual(len(differences), int(summary["Batches"]))
@@ -172,7 +172,7 @@ class RepositoryChecks(unittest.TestCase):
         affected = [r for r in fault if int(r["Fault_Affected"]) == 1]
         pre_onset = [r for r in fault if int(r["Fault_Affected"]) == 0]
         expected_groups = [normal, affected, pre_onset]
-        summaries = read_csv("results/ml4/fault_risk_summary.csv")
+        summaries = read_csv("results/main/fault_risk_summary.csv")
         for summary, rows in zip(summaries[:3], expected_groups):
             warned = sum(float(r["Fault_Risk_Probability"]) >= 0.5 for r in rows)
             self.assertEqual(len(rows), int(summary["Rows"]))
@@ -195,7 +195,7 @@ class RepositoryChecks(unittest.TestCase):
             self.assertEqual(seen, set(range(1, 91)))
 
     def test_feature_metadata_and_full_run(self):
-        metadata = json.loads((ROOT / "results/ml4/run_metadata.json").read_text())
+        metadata = json.loads((ROOT / "results/main/run_metadata.json").read_text())
         self.assertEqual(metadata["run_mode"], "full")
         self.assertEqual(metadata["normal_outer_folds_completed"], 5)
         self.assertEqual(metadata["fault_outer_folds_completed"], 10)

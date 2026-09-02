@@ -1,6 +1,6 @@
 # Reading the saved results
 
-These folders contain existing completed-run outputs. They are not produced by opening GitHub, running repository tests or uploading this package.
+These folders contain existing completed-run outputs. They are not produced by opening a notebook or running repository checks.
 
 ## Earlier notebook: `results/baseline/` and `results/experiments/`
 
@@ -14,7 +14,7 @@ The comparator figure has pooled RMSE on the left and pooled R² on the right. I
 
 The early OOD heatmap shows **score minus its horizon-specific threshold**. Positive entries are warnings. The 24-hour OOD-versus-error scatterplot instead uses the **raw OOD score** on its x-axis; its dashed vertical line is the threshold. These prefix-summary detectors are different from the final `main.ipynb` row-level detector. For batches 91 and 100, a warning at 24 h occurs after their recorded 20-h onset.
 
-## Final notebook: `results/ml4/`
+## Final notebook: `results/main/`
 
 | File | What it means |
 |---|---|

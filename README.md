@@ -1,9 +1,26 @@
 # IndPenSim Penicillin Soft Sensor
 
-This repository contains two stages of a study of penicillin-concentration estimation in simulated fermentation. The first notebook establishes a normal-trained baseline and investigates where it fails. The second tests whether including other fault-affected batches during training improves predictions for a held-out batch.
+[![Repository checks](https://github.com/abdulbasitbehlim/IndPenSim-penicillin-soft-sensor/actions/workflows/checks.yml/badge.svg?branch=main)](https://github.com/abdulbasitbehlim/IndPenSim-penicillin-soft-sensor/actions/workflows/checks.yml)
 
-The target is **current penicillin concentration in g/L**, not a future concentration forecast. This is an exploratory soft-sensor study using IndPenSim, not a validated plant-control system or a complete digital twin.
+**Estimating penicillin concentration from fermentation measurements, and testing what happens when a batch goes wrong.**
 
+[Main notebook](notebooks/main.ipynb) · [Baseline notebook](notebooks/baseline.ipynb) · [All output figures](docs/FIGURES.md) · [Results explained](docs/RESULTS_GUIDE.md) · [Reproducibility](docs/REPRODUCIBILITY.md)
+
+A soft sensor estimates a quantity that is difficult to measure continuously from other process measurements. This project uses the IndPenSim simulation dataset to estimate **current penicillin concentration in g/L**. It is not a future-concentration forecast, a plant-validated sensor or a complete digital twin.
+
+The work has two stages. First, normal-trained models establish a baseline and five experiments examine its weaknesses. Second, a matched gradient-boosting comparison tests whether learning from other fault-affected batches improves predictions for a completely held-out batch.
+
+> **Main finding:** including fault-development batches reduced pooled held-out fault RMSE from **3.1946 to 2.5644 g/L**, a **19.73% reduction**, with little change in normal-batch error. Eight of ten fault batches improved, but batch 100 remained difficult. These are simulation-benchmark results, not evidence that every fault can now be predicted correctly.
+
+## Explore the study
+
+| Start here | What you will find |
+|---|---|
+| [Baseline and model selection](docs/figures/BASELINE.md) | Training trajectories, Random Forest predictions and feature importance |
+| [Five diagnostic experiments](docs/figures/EXPERIMENTS.md) | Repeated batch validation, feature ablation, fault timing, comparators and early OOD warnings |
+| [Fault-inclusive results](docs/figures/FAULT_INCLUSIVE.md) | Held-out comparisons, fault-batch scores, risk scores and the remaining failure |
+| [Complete figure index](docs/FIGURES.md) | All 14 plots, with captions, source links and original PNG files |
+| [Documentation index](docs/README.md) | Methods, data instructions, limitations and provenance |
 
 ## Which notebook should I open?
 
@@ -33,7 +50,7 @@ The source is the [public IndPenSim dataset, version 1](https://doi.org/10.17632
 
 Raw data are **not bundled**. Download them from the original record and follow [data/README.md](data/README.md). Dataset attribution and licensing are in [DATA_SOURCES.md](DATA_SOURCES.md).
 
-History features use only current and preceding input measurements within a batch. No lagged penicillin target is used. Cumulative feed is in **litres of feed**, not sugar mass. The 36 exact names are preserved in [run_metadata.json](results/ml4/run_metadata.json).
+History features use only current and preceding input measurements within a batch. No lagged penicillin target is used. Cumulative feed is in **litres of feed**, not sugar mass. The 36 exact names are preserved in [run_metadata.json](results/main/run_metadata.json).
 
 ## What the two studies test
 
@@ -73,24 +90,26 @@ Both regressors use the same feature definitions and HGB settings. Training give
 | Fault | Normal-only HGB | 2.0763 | 3.1946 | 0.8580 |
 | Fault | Fault-inclusive HGB | 1.4405 | 2.5644 | 0.9085 |
 
-Source: [cross_validated_overall_metrics.csv](results/ml4/cross_validated_overall_metrics.csv). The saved code calls the second strategy **“Fault-aware HGB”**; “fault-inclusive” describes the training change more precisely.
+Source: [cross_validated_overall_metrics.csv](results/main/cross_validated_overall_metrics.csv). The saved code calls the second strategy **“Fault-aware HGB”**; “fault-inclusive” describes the training change more precisely.
 
 Fault RMSE decreased by **19.73%**, while normal RMSE changed little. Eight of ten fault batches improved in RMSE. **Batch 100 remained a failure:** fault-inclusive RMSE was 6.631 g/L and R² was −2.4837. Holding out a batch does not establish generalisation to a fault mechanism absent from training.
 
-![Pooled held-out normal and fault RMSE for the two HGB training strategies](results/ml4/figure_1_rmse_comparison.png)
+![Pooled held-out normal and fault RMSE for the two HGB training strategies](results/main/figure_1_rmse_comparison.png)
 
 *Pooled RMSE, not a mean across independent training repetitions. Shorter bars mean smaller error.*
 
-![Held-out RMSE for every fault batch](results/ml4/figure_2_fault_batch_rmse.png)
+![Held-out RMSE for every fault batch](results/main/figure_2_fault_batch_rmse.png)
 
 *Per-batch results retain adverse outcomes, including batches 92 and 93 that worsened and batch 100 that remained difficult.*
 
 The risk classifier and OOD detector provide **separate warnings**. They do not change the concentration point prediction and do not prove a physical fault. The empirical ranges are not guaranteed 90% confidence intervals. See [docs/RESULTS_GUIDE.md](docs/RESULTS_GUIDE.md) before interpreting them.
 
+The [complete gallery](docs/FIGURES.md) includes the baseline figures, all six plots from the five experiments, and all five final-study figures. Original notebook-display versions are also retained; no figures were redrawn for the repository.
+
 ## Run in Google Colab
 
 1. Put the downloaded CSV in your own Drive, for example `MyDrive/IndPenSim_Data/100_Batches_IndPenSim_V3.csv`.
-2. Open [Google Colab](https://colab.research.google.com/), choose **File → Upload notebook**, and select either notebook from `notebooks/`. After publishing this repository, Colab can also open it through its GitHub tab.
+2. Open [Google Colab](https://colab.research.google.com/), choose **File → Upload notebook**, and select either downloaded notebook from `notebooks/`. This also works when the repository is private.
 3. Start a fresh CPU session. Run the setup cell; it installs the notebook's own dependency versions in Colab. Restart the session if instructed, then rerun from the start.
 4. Run the optional Drive connection and set `DATA_PATH` in the path cell. No credentials belong in the code.
 5. For `main.ipynb`, try `RUN_MODE = "smoke"` to check installation, then use `"full"` for the planned evaluation. Smoke mode uses one normal fold, fault batch 91 and 50 boosting iterations. It is not a research result.
@@ -155,10 +174,10 @@ New outputs are written to `outputs/baseline/<timestamp>/` or `outputs/main/<mod
 | `data/` | Download/location instructions; no raw data |
 | `results/baseline/` | Original split and Random Forest baseline results |
 | `results/experiments/` | Five diagnostic experiments, tables and figures |
-| `results/ml4/` | Original full-run metrics, 113,935 held-out prediction rows, configuration and figures |
-| `docs/` | GitHub upload guide, reproducibility notes, results guide and notebook provenance |
+| `results/main/` | Original full-run metrics, 113,935 held-out prediction rows, configuration and figures |
+| `docs/` | Complete figure gallery, reproducibility notes, results guide and provenance |
 | `tests/` | Lightweight repository checks; no raw-data download or model training |
-| `.github/workflows/` | Optional-on-upload GitHub Actions checks on pushes and pull requests |
+| `.github/workflows/` | GitHub Actions checks on pushes and pull requests |
 | `DATA_SOURCES.md` | Dataset/publication attribution and licensing boundaries |
 | `CITATION.cff` | Software citation metadata |
 | `LICENSE` | MIT licence for original code/documentation; see the exclusions below |
@@ -171,7 +190,16 @@ python -m unittest discover -s tests -v
 
 They check notebook syntax, preserved scientific-source hashes, clean outputs, result-table arithmetic and held-out prediction membership. **They do not retrain either study** and do not prove absence of data leakage in every future modification.
 
-For upload instructions, see [docs/GITHUB_UPLOAD_GUIDE.md](docs/GITHUB_UPLOAD_GUIDE.md). Extract the supplied ZIP and upload the repository contents, not the ZIP itself.
+The checks also verify the figure inventory, image integrity and documentation links. A green check means those repository checks passed; it does not mean the models have been retrained or independently validated.
+
+## Next research steps
+
+1. Hold out entire fault mechanisms, where reliable mechanism labels are available, rather than only individual batches.
+2. Separate the effect of adding fault examples from the effect of the threefold fault weight.
+3. Calibrate warning scores and evaluate prediction-interval coverage on genuinely unseen batches.
+4. Investigate persistent low-production failures such as batch 100, then test on an independent simulation or experimental dataset.
+
+These are proposed extensions, not completed experiments.
 
 ## Limits and responsible interpretation
 
@@ -188,8 +216,8 @@ For upload instructions, see [docs/GITHUB_UPLOAD_GUIDE.md](docs/GITHUB_UPLOAD_GU
 
 ## Citation and licence
 
-Project author: **Abdul Basit Behlim**. This package is prepared as software version **0.1.0**; a public Git tag or release has not been created by this preparation step. Use [CITATION.cff](CITATION.cff), identify the actual commit/release used, and cite the original IndPenSim dataset and publications in [DATA_SOURCES.md](DATA_SOURCES.md). No manuscript DOI is claimed.
+Project author: **Abdul Basit Behlim**. Software version: **0.1.0**. Use [CITATION.cff](CITATION.cff), identify the actual commit or release used, and cite the original IndPenSim dataset and publications in [DATA_SOURCES.md](DATA_SOURCES.md). No manuscript DOI or archived release DOI is claimed.
 
 Original code and accompanying documentation use the [MIT licence](LICENSE). It permits reuse, modification and distribution, including commercial use, while retaining its copyright and licence notice. The original dataset and derived data retain the applicable **CC BY 4.0** attribution terms; third-party articles and dependencies retain their own licences. Confirm institutional and contributor permissions before making the repository public.
 
-AI tools assisted with code drafting and documentation. The project author is responsible for reviewing the code, results and scientific claims. No publication acceptance or fault-detection guarantee is implied.
+AI tools assisted with code drafting and documentation. The project author is responsible for reviewing the code, results and scientific claims.
