@@ -18,7 +18,7 @@ Goldrick, S., Duran-Villalobos, C. A., Jankauskas, K., Lovett, D., Farid, S. S.,
 
 The original code implements concentration models, complete-batch evaluation, diagnostic experiments and result visualisation. The checked-in CSVs and plots are outputs of those analyses of simulated data. They are not newly collected fermentation measurements, nor evidence that the repository author created IndPenSim.
 
-The `results/` directories contain selected outputs of the supplied completed runs. In particular, `results/ml4/cross_validated_predictions.csv` includes source-derived target values together with held-out predictions, so dataset attribution remains relevant when sharing it. The supplied result values were not replaced by a new packaging run.
+The `results/` directories contain selected outputs of the supplied completed runs. In particular, `results/main/cross_validated_predictions.csv` includes source-derived target values together with held-out predictions, so dataset attribution remains relevant when sharing it. The supplied result values were not replaced by a new packaging run.
 
 ## Licence scope
 

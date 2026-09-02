@@ -1,8 +1,10 @@
 cff-version: 1.2.0
-message: "Please cite this software version and the original IndPenSim dataset when using this work. Add the actual public repository or release URL to your citation."
+message: "Please cite this software, the commit or release used, and the original IndPenSim dataset when using this work."
 type: software
 title: "IndPenSim Penicillin Soft Sensor: Batch-Held-Out Evaluation"
 version: 0.1.0
+repository-code: "https://github.com/abdulbasitbehlim/IndPenSim-penicillin-soft-sensor"
+url: "https://github.com/abdulbasitbehlim/IndPenSim-penicillin-soft-sensor"
 authors:
   - family-names: Behlim
     given-names: Abdul Basit
@@ -14,5 +16,4 @@ keywords:
   - soft sensor
   - batch validation
   - fermentation
-# Add repository-code and a release DOI only after they actually exist.
 # Data and derived-data licensing are described separately in DATA_SOURCES.md.
