@@ -6,14 +6,14 @@ Code, split input data and saved results for estimating penicillin concentration
 
 ## Notebooks
 
-| File | Purpose |
-|---|---|
-| [notebooks/main.ipynb](notebooks/main.ipynb) | ML4: compares normal-only and fault-aware HGB models using complete-batch validation; adds fault-risk, OOD and empirical error-range outputs. |
-| [notebooks/baseline.ipynb](notebooks/baseline.ipynb) | ML3: trains the original Linear Regression and Random Forest comparison, selects the baseline model, and runs the five additional experiments. |
+| Study | Notebook | Purpose |
+|---|---|---|
+| Baseline ML | [baseline.ipynb](notebooks/baseline.ipynb) | Compares Linear Regression and Random Forest, selects the baseline model, and runs the five additional experiments. |
+| Main ML | [main.ipynb](notebooks/main.ipynb) | Compares normal-only and fault-aware HGB using complete-batch validation; adds fault-risk, OOD and empirical error-range outputs. |
 
 ## Input CSV files
 
-These are the original process-data split exports from the supplied ML2/ML3 runs. They contain 41 columns, including batch IDs and split labels, and do not contain the full Raman spectra.
+These are the original process-data split exports from the supplied Baseline ML runs. They contain 41 columns, including batch IDs and split labels, and do not contain the full Raman spectra.
 
 | File | Rows | Purpose in the original split |
 |---|---:|---|
@@ -22,7 +22,7 @@ These are the original process-data split exports from the supplied ML2/ML3 runs
 | [test_normal_15_batches.csv](data/splits/test_normal_15_batches.csv) | 17,080 | Normal-operation test data: 15 complete normal batches. |
 | [test_fault_10_batches.csv](data/splits/test_fault_10_batches.csv) | 11,525 | Fault-test data: batches 91–100. |
 
-Together, the four files contain 113,935 rows from 100 batches. ML4 can read this complete split directory and creates its own cross-validation folds; it does not reuse the old split labels as its test design.
+Together, the four files contain 113,935 rows from 100 batches. Main ML can read this complete split directory and creates its own cross-validation folds; it does not reuse the old split labels as its test design.
 
 | Data guide | Purpose |
 |---|---|
@@ -37,10 +37,10 @@ Open a folder's README for the purpose of every result file.
 
 | Folder | Purpose |
 |---|---|
-| [results/ml2/](results/ml2/README.md) | Earlier ML2 baseline results, retained as a separate run. |
-| [results/baseline/](results/baseline/README.md) | ML3 baseline validation, normal/fault test metrics, individual predictions and baseline plots. |
-| [results/experiments/](results/experiments/README.md) | ML3's five experiments: repeated batch CV, time/feed ablation, fault phases, model comparison and OOD/uncertainty analysis. |
-| [results/main/](results/main/README.md) | ML4's full-run predictions, batch metrics, bootstrap comparison, warning scores and figures. |
+| [results/baseline_earlier/](results/baseline_earlier/README.md) | Baseline ML: earlier saved run, kept separate to preserve its original predictions and metrics. |
+| [results/baseline/](results/baseline/README.md) | Baseline ML: current notebook's validation, normal/fault test metrics, individual predictions and baseline plots. |
+| [results/experiments/](results/experiments/README.md) | Baseline ML's five experiments: repeated batch CV, time/feed ablation, fault phases, model comparison and OOD/uncertainty analysis. |
+| [results/main/](results/main/README.md) | Main ML's full-run predictions, batch metrics, bootstrap comparison, warning scores and figures. |
 
 ## Supporting files
 
@@ -51,8 +51,8 @@ Open a folder's README for the purpose of every result file.
 | [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md) | Instructions for running the notebooks and checking the results. |
 | [docs/README.md](docs/README.md) | Index of the supporting documentation and verification records. |
 | [requirements.txt](requirements.txt) | Default package requirements for the main notebook. |
-| [requirements/main.txt](requirements/main.txt) | Package versions for ML4. |
-| [requirements/baseline.txt](requirements/baseline.txt) | Separate package requirements for the earlier notebook. |
+| [requirements/main.txt](requirements/main.txt) | Package versions for Main ML. |
+| [requirements/baseline.txt](requirements/baseline.txt) | Separate package requirements for Baseline ML. |
 | [tests/](tests/) | Checks notebook code, input data, result arithmetic, figures and documentation links. |
 | [.github/workflows/checks.yml](.github/workflows/checks.yml) | Runs the repository checks automatically on GitHub. |
 | [DATA_SOURCES.md](DATA_SOURCES.md) | Credits the original IndPenSim dataset and explains data licensing. |

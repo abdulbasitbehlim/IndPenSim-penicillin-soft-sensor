@@ -5,7 +5,7 @@
       "path": "notebooks/baseline.ipynb",
       "original_filename": "model.ipynb",
       "original_file_sha256": "c4b09a7d334c5a6b47e48e72f5c97d1378ea2d0f6991865cbe29dd6b6f28f2aa",
-      "repository_file_sha256": "a09db39abaf587396105ee2734b6c4944279d64012c7c4f2f096caf1166b0b11",
+      "repository_file_sha256": "ef4f2c81f7764ed2de3d34493ec9afb584475a6205b5ea7e3ed18b6f6e741745",
       "original_cells": 80,
       "repository_cells": 82,
       "code_cells": [
@@ -378,13 +378,14 @@
           "setup_change": null
         }
       ],
-      "previous_repository_path": "notebooks/model.ipynb"
+      "previous_repository_path": "notebooks/model.ipynb",
+      "display_name": "Baseline ML"
     },
     {
       "path": "notebooks/main.ipynb",
       "original_filename": "ML_4.ipynb",
       "original_file_sha256": "ba72cd6a2e90abb9c94e5ab38e1c2654197b765807491e58dceafdddb65277f9",
-      "repository_file_sha256": "bb9e1ec675df7b65a23daf44105598ce0edd3346d6a384b25b19c48afebd8ef7",
+      "repository_file_sha256": "ae33e4583f686ebb5b2b739e4cf4ca477807de7ac04493f1d7c618ab041fd654",
       "original_cells": 28,
       "repository_cells": 28,
       "code_cells": [
@@ -517,351 +518,352 @@
           "setup_change": null
         }
       ],
-      "previous_repository_path": "notebooks/ML_4.ipynb"
+      "previous_repository_path": "notebooks/ML_4.ipynb",
+      "display_name": "Main ML"
     }
   ],
   "archived_results": [
     {
       "path": "results/baseline/fault_aware_batch_split.json",
       "sha256": "2f1fc522d1257806fb00a48066cd26954dac9ffdcc27af2fba9a2531471b1d85",
-      "run": "earlier"
+      "run": "baseline"
     },
     {
       "path": "results/baseline/fault_aware_batch_split_table.csv",
       "sha256": "3ba60f3801557dc5148bebd2a0832ef778a216f3cc941eacc1992df265ba039a",
-      "run": "earlier"
+      "run": "baseline"
     },
     {
       "path": "results/baseline/fault_test_metrics_by_batch.csv",
       "sha256": "8b384bd0c7102ed73931cce9c37d5b0835e686c8e7044e287bc8c53ec94570ca",
-      "run": "earlier"
+      "run": "baseline"
     },
     {
       "path": "results/baseline/model_information.json",
       "sha256": "65c4ab86dde51cc5b1800dcd21dcc6c6d11b4e55545f81c884fd2a2f8cdc9c3b",
-      "run": "earlier"
+      "run": "baseline"
     },
     {
       "path": "results/baseline/normal_and_fault_test_results.csv",
       "sha256": "b218e9f4968f9993285bc2403598590fbb3443290c78fe1c4b5ae38a85bba805",
-      "run": "earlier"
+      "run": "baseline"
     },
     {
       "path": "results/baseline/normal_test_metrics_by_batch.csv",
       "sha256": "e262d7352f98ce78e2670185cd59941438659c576247b2f5aec503596c994d98",
-      "run": "earlier"
+      "run": "baseline"
     },
     {
       "path": "results/baseline/row_split_summary.csv",
       "sha256": "324584784a8c4b7405c13cf8367af1dfb846036aa2b53451122a95e8359eb26a",
-      "run": "earlier"
+      "run": "baseline"
     },
     {
       "path": "results/baseline/validation_results.csv",
       "sha256": "27960703ae4c4ea15ec2c7deeeb61c13c76ee55e767b3f2b2669b4e8eb1040cd",
-      "run": "earlier"
+      "run": "baseline"
     },
     {
       "path": "results/experiments/experiment_1_repeated_batch_cv_fold_metrics.csv",
       "sha256": "8f045df69871ea9b5e2829e6c604ebe6d3733d1aac3efeb4a3cfd49c1e8284e3",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_1_repeated_batch_cv_summary.csv",
       "sha256": "5979645cbf2e69f69305bcf91b2fa68671250328fdeb083cb1f6eb3d7f1da997",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_2_time_feed_ablation.csv",
       "sha256": "7a86529a9b9787381fc1df0c6c43feca4d686756376b69d9a9efa8e70091aff7",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_2_time_feed_ablation_by_batch.csv",
       "sha256": "1b054e0d7c2e518030ede6316d5d115b5816a4c324f7fad9e04cdbd7395f8cdd",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_3_fault_onset_audit.csv",
       "sha256": "510a0b956a1338572b5174d1125502c17e9ef4204bcda80f5836490c66cb35b4",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_3_fault_phase_by_batch.csv",
       "sha256": "595a6694cf5c5dcd991320a6eb47a910258f3141d2e49f62bfbc1cb6fe1de734",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_3_fault_phase_overall.csv",
       "sha256": "9bfc1c270d69b7ed402d0762afa1ebb8444e9827dadf33832b8f04b4b608b20d",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_4_fault_degradation.csv",
       "sha256": "010f299ddf2f515408cdfff14e5988530ad6cfef3affb7fb4657f28b608679d9",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_4_model_comparison_by_batch.csv",
       "sha256": "82eca661a1bb0b747e5351ad7a915e8c3e80233870bf902a3d1cc6f248390a70",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_4_model_comparison_test.csv",
       "sha256": "20c977559e5ab6241f49a3ffc9f2ac0fd36af2bb08da77a0d65ad51a7f1c132e",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_4_model_comparison_validation.csv",
       "sha256": "813f0e2529486c30a16384537c8d5aacc98a91865d6d06c583df60969f75e6d8",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_5_early_ood_scores.csv",
       "sha256": "b42860bded6ae3b94faa72636bee08606d661cdce25dd021cd1a7f298926cfdb",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_5_fault_ood_earliest_detection.csv",
       "sha256": "d201f06c9401d6129a18aaf2983724f118ec4c64088de0a3942a0e53bfbc90e4",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_5_ood_evaluation_summary.csv",
       "sha256": "1a915ad46e162b0a8d07f733729121e0fe92fae4e2b1a8b49170c291529a29e8",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_5_ood_model_audit.csv",
       "sha256": "4f9b764e17a4806c2595c4b324057a3f1cf84e98411eaafae21fccce5752c322",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_5_ood_uncertainty_by_batch.csv",
       "sha256": "d9eb066628a0b40c51bbae47397a3e1959fbd1f4eaaa5e8098c8279a3f5944f9",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_5_uncertainty_by_batch.csv",
       "sha256": "5aaab21c9f0c3f755977dde16b45147fa0e93f0caf7da09ce9a80908b90e690d",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_5_uncertainty_summary.csv",
       "sha256": "dc97bd52eb214de1824cfc2ebb5dbc788c3a8bf86777f763c404ef4075ed08ca",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/experiment_configuration.json",
       "sha256": "5634cdea342ebef460a698a22ebf14e3f7a253080ebb131466455aa6d80914f0",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/figure_experiment_1_cv_distribution.png",
       "sha256": "9fbf9f702ba36e2ee173b1b32c4dad72cc8b624b7d76d4c4f0788ece4dd3056e",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/figure_experiment_2_time_feed_ablation.png",
       "sha256": "52ed74f4e60aadd283d670e239ec5db1108a0e78b4ca6b77e34224fd1e894d6c",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/figure_experiment_3_fault_phase_mae.png",
       "sha256": "85ac4364324bd1f19db65d62552a65298daecdaaa2b4a761a66500ea17549fa6",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/figure_experiment_4_model_comparison.png",
       "sha256": "4f2453a678286ce3c4f35ee77b8688c8f55f98ff41d40d69cee9ed4df8eeb0a2",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/figure_experiment_5_fault_ood_heatmap.png",
       "sha256": "90e810859295f4cd7966a48a206c40871afe751707c952505368b98119e3f18a",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/experiments/figure_experiment_5_ood_vs_batch_rmse.png",
       "sha256": "83981c1dba1e2ab508d46f849749a9c9d31cdf94038eeb8fe0fe72f382eb2d97",
-      "run": "earlier"
+      "run": "baseline_experiments"
     },
     {
       "path": "results/main/batch_100_held_out_trajectory.png",
       "sha256": "4fe18149d65ff8b96a812537fc076371b05cbb17f4020892b5b0beb82909444c",
-      "run": "ML_4_full"
+      "run": "main_full"
     },
     {
       "path": "results/main/cross_validated_batch_metrics.csv",
       "sha256": "e17ebe24e1dd30cf7c6089ade22908b4b24d840519c695995f9979aad9d03db1",
-      "run": "ML_4_full"
+      "run": "main_full"
     },
     {
       "path": "results/main/cross_validated_overall_metrics.csv",
       "sha256": "4adacef149d3d02eab61642d54b21d029715bf604a2095826ad04f3dd05bad0b",
-      "run": "ML_4_full"
+      "run": "main_full"
     },
     {
       "path": "results/main/cross_validated_predictions.csv",
       "sha256": "7603a50c6fc5056a0b1911e096eea08b6a5235c26297dec1d9a6e8868e1802e2",
-      "run": "ML_4_full"
+      "run": "main_full"
     },
     {
       "path": "results/main/deployment_reliability_by_batch.csv",
       "sha256": "62101a3dfa8dcd79856046600af6af961fb24f9fd076fbf873afc90a6e4ea864",
-      "run": "ML_4_full"
+      "run": "main_full"
     },
     {
       "path": "results/main/fault_risk_summary.csv",
       "sha256": "64d3fdcdec8d8069dcb65e59f76c40c6cc250943998c7bed8e75277fc9e0ad82",
-      "run": "ML_4_full"
+      "run": "main_full"
     },
     {
       "path": "results/main/figure_1_rmse_comparison.png",
       "sha256": "1e197964c3ccde5d6439276740fd191e568af7d3404616717ea9ccd2604434cd",
-      "run": "ML_4_full"
+      "run": "main_full"
     },
     {
       "path": "results/main/figure_2_fault_batch_rmse.png",
       "sha256": "06118dc4297fe2805dd27e75e685fb1f74c2b4ee1060c8f9c97604e4c11da83d",
-      "run": "ML_4_full"
+      "run": "main_full"
     },
     {
       "path": "results/main/figure_3_fault_actual_vs_predicted.png",
       "sha256": "5d5f12afffd71b99327ce32e769f58549396e9af38da13e026564ce7ae3129f4",
-      "run": "ML_4_full"
+      "run": "main_full"
     },
     {
       "path": "results/main/figure_4_fault_risk_by_phase.png",
       "sha256": "e14a967ee525cde9ee595ecc8983df5eacbfb2bc2fd190cc47766fb0506d1f7d",
-      "run": "ML_4_full"
+      "run": "main_full"
     },
     {
       "path": "results/main/paired_batch_bootstrap.csv",
       "sha256": "029eb1e99e81adff4fe362508fcd97fabe9b1758dd2c52d3d1877c9cb2bb8e73",
-      "run": "ML_4_full"
+      "run": "main_full"
     },
     {
       "path": "results/main/run_metadata.json",
       "sha256": "28be0b6412bb8386c13893215944d55e1950c15aea1f2564e155de2cd15093ea",
-      "run": "ML_4_full"
+      "run": "main_full"
     },
     {
-      "path": "results/ml2/model_information.json",
+      "path": "results/baseline_earlier/model_information.json",
       "sha256": "65c4ab86dde51cc5b1800dcd21dcc6c6d11b4e55545f81c884fd2a2f8cdc9c3b",
-      "run": "ML2",
+      "run": "baseline_earlier",
       "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
       "source_member": "ML 2 Results/model_information.json"
     },
     {
-      "path": "results/ml2/row_split_summary.csv",
+      "path": "results/baseline_earlier/row_split_summary.csv",
       "sha256": "324584784a8c4b7405c13cf8367af1dfb846036aa2b53451122a95e8359eb26a",
-      "run": "ML2",
+      "run": "baseline_earlier",
       "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
       "source_member": "ML 2 Results/row_split_summary.csv"
     },
     {
-      "path": "results/ml2/fault_test_metrics_by_batch.csv",
+      "path": "results/baseline_earlier/fault_test_metrics_by_batch.csv",
       "sha256": "9a00c93f096bb6a9251fcb0290b7efbf3e2afb1a6edddc688f3f05835f1f88fe",
-      "run": "ML2",
+      "run": "baseline_earlier",
       "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
       "source_member": "ML 2 Results/fault_test_metrics_by_batch.csv"
     },
     {
-      "path": "results/ml2/normal_test_metrics_by_batch.csv",
+      "path": "results/baseline_earlier/normal_test_metrics_by_batch.csv",
       "sha256": "419f43be6b3b897ae61869093521f22e8924350b054901661b9f5c7f5f695d91",
-      "run": "ML2",
+      "run": "baseline_earlier",
       "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
       "source_member": "ML 2 Results/normal_test_metrics_by_batch.csv"
     },
     {
-      "path": "results/ml2/normal_and_fault_test_results.csv",
+      "path": "results/baseline_earlier/normal_and_fault_test_results.csv",
       "sha256": "b218e9f4968f9993285bc2403598590fbb3443290c78fe1c4b5ae38a85bba805",
-      "run": "ML2",
+      "run": "baseline_earlier",
       "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
       "source_member": "ML 2 Results/normal_and_fault_test_results.csv"
     },
     {
-      "path": "results/ml2/fault_aware_batch_split.json",
+      "path": "results/baseline_earlier/fault_aware_batch_split.json",
       "sha256": "2f1fc522d1257806fb00a48066cd26954dac9ffdcc27af2fba9a2531471b1d85",
-      "run": "ML2",
+      "run": "baseline_earlier",
       "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
       "source_member": "ML 2 Results/fault_aware_batch_split.json"
     },
     {
-      "path": "results/ml2/validation_results.csv",
+      "path": "results/baseline_earlier/validation_results.csv",
       "sha256": "27960703ae4c4ea15ec2c7deeeb61c13c76ee55e767b3f2b2669b4e8eb1040cd",
-      "run": "ML2",
+      "run": "baseline_earlier",
       "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
       "source_member": "ML 2 Results/validation_results.csv"
     },
     {
-      "path": "results/ml2/fault_test_predictions.csv",
+      "path": "results/baseline_earlier/fault_test_predictions.csv",
       "sha256": "1ee25081c6210899bf346b817ddc3d5ddd3a287559ce118e87211078514d1c6d",
-      "run": "ML2",
+      "run": "baseline_earlier",
       "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
       "source_member": "ML 2 Results/fault_test_predictions.csv"
     },
     {
-      "path": "results/ml2/normal_test_predictions.csv",
+      "path": "results/baseline_earlier/normal_test_predictions.csv",
       "sha256": "1219d832364c0b2d772276d7920d265d12560b2e54a4ef4095f6cefb6a31add4",
-      "run": "ML2",
+      "run": "baseline_earlier",
       "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
       "source_member": "ML 2 Results/normal_test_predictions.csv"
     },
     {
-      "path": "results/ml2/fault_aware_batch_split_table.csv",
+      "path": "results/baseline_earlier/fault_aware_batch_split_table.csv",
       "sha256": "3ba60f3801557dc5148bebd2a0832ef778a216f3cc941eacc1992df265ba039a",
-      "run": "ML2",
+      "run": "baseline_earlier",
       "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
       "source_member": "ML 2 Results/fault_aware_batch_split_table.csv"
     },
     {
       "path": "results/experiments/report_ready_results_summary.txt",
       "sha256": "6645ac6a6e7e8be79d2ae8d079486f7cbd2ce480a932b45f43e0827f068b131a",
-      "run": "ML3",
+      "run": "baseline_experiments",
       "source_archive": "ML 3 Results-20260903T053131Z-1-001.zip",
       "source_member": "ML 3 Results/Five_Additional_Experiments/report_ready_results_summary.txt"
     },
     {
       "path": "results/baseline/fault_test_predictions.csv",
       "sha256": "37c81a709a9099d15c765d0a77ab867773f7312656f034943db5e400cb5aed76",
-      "run": "ML3",
+      "run": "baseline",
       "source_archive": "ML 3 Results-20260903T053131Z-1-001.zip",
       "source_member": "ML 3 Results/fault_test_predictions.csv"
     },
     {
       "path": "results/baseline/normal_test_predictions.csv",
       "sha256": "2ee945249e7b119fe544707b1b6434234e3031ee528b91e1ea50ca9b722c4310",
-      "run": "ML3",
+      "run": "baseline",
       "source_archive": "ML 3 Results-20260903T053131Z-1-001.zip",
       "source_member": "ML 3 Results/normal_test_predictions.csv"
     },
     {
       "path": "results/experiments/experiment_3_fault_phase_predictions.csv",
       "sha256": "f78bc2a5b881e83d7d36496aa1dd1d7725ad934146ad25d7deda26202ae7dab9",
-      "run": "ML3",
+      "run": "baseline_experiments",
       "source_archive": "ML 3 Results-20260903T053131Z-1-001.zip",
       "source_member": "ML 3 Results/Five_Additional_Experiments/experiment_3_fault_phase_predictions.csv"
     },
     {
       "path": "results/experiments/experiment_5_uncertainty_predictions.csv",
       "sha256": "e73f9359a3fbcb9222ce2291a985ba1ea1d651e95bce5e9f074ba4a3aeb8f7ac",
-      "run": "ML3",
+      "run": "baseline_experiments",
       "source_archive": "ML 3 Results-20260903T053131Z-1-001.zip",
       "source_member": "ML 3 Results/Five_Additional_Experiments/experiment_5_uncertainty_predictions.csv"
     },
     {
       "path": "results/main/RESULTS_SUMMARY.txt",
       "sha256": "d73fb5ceb97c3a837a240efe1a83b76f014b697bee9a4abe4d9cd82858eb402f",
-      "run": "ML4",
+      "run": "main_full",
       "source_archive": "ML 4 Results-20260903T053133Z-1-001.zip",
       "source_member": "ML 4 Results/full_20260902_051727_063872_UTC/RESULTS_SUMMARY.txt"
     }
   ],
   "licence": "MIT for original code/documentation; data attribution in DATA_SOURCES.md",
   "naming_update": {
-    "repository_name": "penicillin-soft-sensor",
+    "repository_name": "IndPenSim-penicillin-soft-sensor",
     "original_to_public_notebook": {
       "model.ipynb": "notebooks/baseline.ipynb",
       "ML_4.ipynb": "notebooks/main.ipynb"
@@ -869,7 +871,12 @@
     "changes": "Names, documentation, requirement references and setup output-directory labels only.",
     "scientific_code_changed": false,
     "archived_results_changed": false,
-    "models_retrained": false
+    "models_retrained": false,
+    "study_names": {
+      "baseline": "Baseline ML",
+      "main": "Main ML"
+    },
+    "earlier_baseline_results": "results/baseline_earlier/"
   },
   "repository_maintenance": {
     "base_commit": "d04ae837c229fc66d7579a102540c21c82129537",
@@ -878,5 +885,13 @@
     "numerical_results_changed": false,
     "models_retrained": false
   },
-  "split_data_manifest": "data/splits/manifest.json"
+  "split_data_manifest": "data/splits/manifest.json",
+  "study_label_update": {
+    "base_commit": "608da73d35b69ff3310f9e21505f5f0d8cc0e4c2",
+    "scope": "Study labels, notebook titles, earlier-baseline folder and links only.",
+    "all_code_cell_sources_preserved": true,
+    "all_result_and_data_bytes_preserved": true,
+    "original_source_names_preserved": true,
+    "models_retrained": false
+  }
 }

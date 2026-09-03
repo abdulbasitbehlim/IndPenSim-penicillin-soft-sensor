@@ -1,6 +1,6 @@
-# Five diagnostic experiments
+# Baseline ML — five diagnostic experiments
 
-[All figures](../FIGURES.md) · [Baseline](BASELINE.md) · [Fault-inclusive results](FAULT_INCLUSIVE.md) · [Baseline notebook](../../notebooks/baseline.ipynb)
+[All figures](../FIGURES.md) · [Baseline ML](BASELINE.md) · [Main ML results](FAULT_INCLUSIVE.md) · [Baseline ML notebook](../../notebooks/baseline.ipynb)
 
 These experiments investigate the normal-trained baseline, not the later fault-inclusive HGB evaluation. The figures below are original saved outputs; each also links to its original notebook-display rendering.
 

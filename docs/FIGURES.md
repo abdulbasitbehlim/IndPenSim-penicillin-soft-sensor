@@ -4,9 +4,9 @@
 
 The gallery contains **14 distinct plots** from the two completed studies. Every plot is an original output, not a redrawn illustration. Six experiment plots also have a separate notebook-display rendering: both versions are retained, giving **20 PNG files** in total.
 
-## Baseline: learning from normal batches
+## Baseline ML: learning from normal batches
 
-[Open the baseline gallery](figures/BASELINE.md)
+[Open the Baseline ML gallery](figures/BASELINE.md)
 
 | Figure | Chart type | Question |
 |---|---|---|
@@ -14,7 +14,7 @@ The gallery contains **14 distinct plots** from the two completed studies. Every
 | B2 — Random Forest predictions | Paired scatterplots | How does the selected model behave on unseen batches? |
 | B3 — Feature importance | Horizontal bar chart | Which inputs does the forest rely on most? |
 
-## Five experiments: investigating the weaknesses
+## Baseline ML experiments: investigating the weaknesses
 
 [Open the experiment gallery](figures/EXPERIMENTS.md)
 
@@ -27,9 +27,9 @@ The gallery contains **14 distinct plots** from the two completed studies. Every
 | E5a — Early OOD warnings | Annotated heatmap | Which batch prefixes look unfamiliar? |
 | E5b — OOD versus error | Scatterplot with threshold | Do early warnings identify high-error batches? |
 
-## Fault-inclusive model: improvements and remaining failures
+## Main ML: improvements and remaining failures
 
-[Open the final-study gallery](figures/FAULT_INCLUSIVE.md)
+[Open the Main ML gallery](figures/FAULT_INCLUSIVE.md)
 
 | Figure | Chart type | Question |
 |---|---|---|

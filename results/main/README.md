@@ -1,6 +1,6 @@
-# ML4 — fault-aware soft sensor results
+# Main ML — fault-aware soft sensor results
 
-Saved outputs of the full ML4 run: five normal-batch folds and ten leave-one-fault-batch-out evaluations. Source notebook: [main.ipynb](../../notebooks/main.ipynb).
+Saved outputs of the full Main ML run: five normal-batch folds and ten leave-one-fault-batch-out evaluations. Source notebook: [main.ipynb](../../notebooks/main.ipynb).
 
 | File | Purpose |
 |---|---|

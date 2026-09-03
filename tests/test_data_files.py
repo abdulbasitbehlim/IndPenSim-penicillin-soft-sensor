@@ -90,7 +90,7 @@ class DatasetFileChecks(unittest.TestCase):
         self.assertEqual(sum(sum(s["counts"].values()) for s in self.summaries.values()), 113935)
 
     def test_same_batch_assignment_as_original_result_runs(self):
-        for folder in ("ml2", "baseline"):
+        for folder in ("baseline_earlier", "baseline"):
             original = json.loads((ROOT / "results" / folder / "fault_aware_batch_split.json").read_text())
             for filename, (_, _, _, original_key) in SPLITS.items():
                 self.assertEqual(set(self.summaries[filename]["counts"]), set(original[original_key]))
@@ -132,7 +132,7 @@ class DatasetFileChecks(unittest.TestCase):
         self.assertIn("data/splits/*.csv -text", (ROOT / ".gitattributes").read_text())
 
     def test_each_result_file_has_a_purpose_in_its_folder_readme(self):
-        for folder in ("ml2", "baseline", "experiments", "main"):
+        for folder in ("baseline_earlier", "baseline", "experiments", "main"):
             directory = ROOT / "results" / folder
             guide = (directory / "README.md").read_text()
             for path in directory.iterdir():
@@ -142,8 +142,8 @@ class DatasetFileChecks(unittest.TestCase):
                 for path in (directory / "figures").glob("*.png"):
                     self.assertIn("](figures/" + path.name + ")", guide)
 
-    def test_ml2_and_ml3_prediction_tables_reproduce_own_metrics(self):
-        for folder in ("ml2", "baseline"):
+    def test_both_baseline_runs_prediction_tables_reproduce_own_metrics(self):
+        for folder in ("baseline_earlier", "baseline"):
             summaries = read_csv(f"results/{folder}/normal_and_fault_test_results.csv")
             for filename, summary in zip(("normal_test_predictions.csv", "fault_test_predictions.csv"), summaries):
                 rows = read_csv(f"results/{folder}/{filename}")

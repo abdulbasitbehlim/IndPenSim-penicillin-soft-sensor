@@ -1,4 +1,4 @@
-# ML3 — five additional experiments
+# Baseline ML — five additional experiments
 
 Outputs of the follow-up sections in [baseline.ipynb](../../notebooks/baseline.ipynb). All five experiments and their original plots are retained.
 

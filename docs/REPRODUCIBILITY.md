@@ -4,10 +4,10 @@
 
 | Notebook | Study | Input |
 |---|---|---|
-| [main.ipynb](../notebooks/main.ipynb) | ML4 fault-aware comparison | The included [four split CSVs](../data/splits/README.md), or the original full CSV. |
-| [baseline.ipynb](../notebooks/baseline.ipynb) | ML3 baseline and five experiments | The original concatenated CSV downloaded from the [IndPenSim record](https://doi.org/10.17632/pdnjz7zz5x.1), in original batch order. |
+| [main.ipynb](../notebooks/main.ipynb) | Main ML fault-aware comparison | The included [four split CSVs](../data/splits/README.md), or the original full CSV. |
+| [baseline.ipynb](../notebooks/baseline.ipynb) | Baseline ML model selection and five experiments | The original concatenated CSV downloaded from the [IndPenSim record](https://doi.org/10.17632/pdnjz7zz5x.1), in original batch order. |
 
-ML2's earlier outputs are preserved in [results/ml2/](../results/ml2/README.md); a separate ML2 notebook was not supplied.
+The earlier Baseline ML outputs are preserved in [results/baseline_earlier/](../results/baseline_earlier/README.md); a separate notebook for that earlier run was not supplied.
 
 ## Local Jupyter
 
@@ -49,21 +49,21 @@ For the earlier study, create a separate environment, install [requirements/base
 
 ## Google Colab
 
-Open the chosen notebook in a fresh Colab session. Set the data path to the actual CSV or, for ML4, to a folder containing all four included split CSVs. Google Drive mounting is optional. If package installation requests a runtime restart, restart before executing from the beginning.
+Open the chosen notebook in a fresh Colab session. Set the data path to the actual CSV or, for Main ML, to a folder containing all four included split CSVs. Google Drive mounting is optional. If package installation requests a runtime restart, restart before executing from the beginning.
 
 ## Outputs and recorded environments
 
 New runs write to fresh folders under outputs/baseline/ or outputs/main/. Keep these separate from the archived [results/](../results/README.md). The notebooks save the numerical tables, plots, metadata and trained model.
 
-The saved ML4 metadata records Python 3.13.15 and its scientific package versions. The baseline run recorded NumPy 2.1.3, pandas 2.2.3 and scikit-learn 1.6.1, but not a complete historical environment lock. The separate requirements files support reproduction; exact agreement must be checked after running.
+The saved Main ML metadata records Python 3.13.15 and its scientific package versions. The baseline run recorded NumPy 2.1.3, pandas 2.2.3 and scikit-learn 1.6.1, but not a complete historical environment lock. The separate requirements files support reproduction; exact agreement must be checked after running.
 
 ## Evaluation boundaries
 
-- The four included CSVs preserve the old 60/15/15/10 split. ML4 recombines them and creates its own complete-batch folds.
-- ML4 tests normal batches in five folds and fault batches one at a time, learning from the other nine fault batches. This is not verified leave-one-fault-mechanism-out testing.
+- The four included CSVs preserve the old 60/15/15/10 split. Main ML recombines them and creates its own complete-batch folds.
+- Main ML tests normal batches in five folds and fault batches one at a time, learning from the other nine fault batches. This is not verified leave-one-fault-mechanism-out testing.
 - The earlier repeated CV is five repeats of five normal folds, not 25 independent datasets.
-- The earlier RF test and ML4's HGB comparison use different training/evaluation designs. Compare methods within the same experiment.
-- Adding fault examples and increasing their weight occur together in ML4. The current comparison does not isolate the contribution of each change.
+- The earlier RF test and Main ML's HGB comparison use different training/evaluation designs. Compare methods within the same experiment.
+- Adding fault examples and increasing their weight occur together in Main ML. The current comparison does not isolate the contribution of each change.
 - The final model is refitted on all 100 labelled batches after evaluation. Its deployment diagnostics are not another held-out test.
 
 ## Automated checks

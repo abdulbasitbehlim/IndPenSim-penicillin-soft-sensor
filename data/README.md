@@ -13,7 +13,7 @@
 | [main.ipynb](../notebooks/main.ipynb) | The included directory containing all four split CSVs, or the original full CSV. |
 | [baseline.ipynb](../notebooks/baseline.ipynb) | The original concatenated IndPenSim CSV in batch order. It does not directly accept the four-file split directory. |
 
-For a local ML4 run, set DATA_PATH in the notebook's path cell to:
+For a local Main ML run, set DATA_PATH in the notebook's path cell to:
 
 ~~~python
 DATA_PATH = str(PROJECT_ROOT / "data" / "splits")

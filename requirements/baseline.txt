@@ -1,4 +1,4 @@
-# Python 3.12 recommended. Use a separate environment from main.ipynb.
+# Baseline ML (baseline.ipynb). Python 3.12 recommended; use a separate environment from Main ML.
 # These three versions were recorded by the earlier completed experiment.
 numpy==2.1.3
 pandas==2.2.3

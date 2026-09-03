@@ -1,6 +1,6 @@
-# Baseline results and model selection
+# Baseline ML — results and model selection
 
-[All figures](../FIGURES.md) · [Five experiments](EXPERIMENTS.md) · [Fault-inclusive results](FAULT_INCLUSIVE.md) · [Baseline notebook](../../notebooks/baseline.ipynb)
+[All figures](../FIGURES.md) · [Five experiments](EXPERIMENTS.md) · [Main ML results](FAULT_INCLUSIVE.md) · [Baseline ML notebook](../../notebooks/baseline.ipynb)
 
 The first study used 60 normal training batches, 15 normal validation batches and 15 normal test batches. Ten fault batches formed a separate stress test. Random Forest was selected by validation RMSE and refitted on the 75 normal development batches.
 
