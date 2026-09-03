@@ -745,6 +745,118 @@
       "path": "results/main/run_metadata.json",
       "sha256": "28be0b6412bb8386c13893215944d55e1950c15aea1f2564e155de2cd15093ea",
       "run": "ML_4_full"
+    },
+    {
+      "path": "results/ml2/model_information.json",
+      "sha256": "65c4ab86dde51cc5b1800dcd21dcc6c6d11b4e55545f81c884fd2a2f8cdc9c3b",
+      "run": "ML2",
+      "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
+      "source_member": "ML 2 Results/model_information.json"
+    },
+    {
+      "path": "results/ml2/row_split_summary.csv",
+      "sha256": "324584784a8c4b7405c13cf8367af1dfb846036aa2b53451122a95e8359eb26a",
+      "run": "ML2",
+      "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
+      "source_member": "ML 2 Results/row_split_summary.csv"
+    },
+    {
+      "path": "results/ml2/fault_test_metrics_by_batch.csv",
+      "sha256": "9a00c93f096bb6a9251fcb0290b7efbf3e2afb1a6edddc688f3f05835f1f88fe",
+      "run": "ML2",
+      "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
+      "source_member": "ML 2 Results/fault_test_metrics_by_batch.csv"
+    },
+    {
+      "path": "results/ml2/normal_test_metrics_by_batch.csv",
+      "sha256": "419f43be6b3b897ae61869093521f22e8924350b054901661b9f5c7f5f695d91",
+      "run": "ML2",
+      "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
+      "source_member": "ML 2 Results/normal_test_metrics_by_batch.csv"
+    },
+    {
+      "path": "results/ml2/normal_and_fault_test_results.csv",
+      "sha256": "b218e9f4968f9993285bc2403598590fbb3443290c78fe1c4b5ae38a85bba805",
+      "run": "ML2",
+      "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
+      "source_member": "ML 2 Results/normal_and_fault_test_results.csv"
+    },
+    {
+      "path": "results/ml2/fault_aware_batch_split.json",
+      "sha256": "2f1fc522d1257806fb00a48066cd26954dac9ffdcc27af2fba9a2531471b1d85",
+      "run": "ML2",
+      "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
+      "source_member": "ML 2 Results/fault_aware_batch_split.json"
+    },
+    {
+      "path": "results/ml2/validation_results.csv",
+      "sha256": "27960703ae4c4ea15ec2c7deeeb61c13c76ee55e767b3f2b2669b4e8eb1040cd",
+      "run": "ML2",
+      "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
+      "source_member": "ML 2 Results/validation_results.csv"
+    },
+    {
+      "path": "results/ml2/fault_test_predictions.csv",
+      "sha256": "1ee25081c6210899bf346b817ddc3d5ddd3a287559ce118e87211078514d1c6d",
+      "run": "ML2",
+      "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
+      "source_member": "ML 2 Results/fault_test_predictions.csv"
+    },
+    {
+      "path": "results/ml2/normal_test_predictions.csv",
+      "sha256": "1219d832364c0b2d772276d7920d265d12560b2e54a4ef4095f6cefb6a31add4",
+      "run": "ML2",
+      "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
+      "source_member": "ML 2 Results/normal_test_predictions.csv"
+    },
+    {
+      "path": "results/ml2/fault_aware_batch_split_table.csv",
+      "sha256": "3ba60f3801557dc5148bebd2a0832ef778a216f3cc941eacc1992df265ba039a",
+      "run": "ML2",
+      "source_archive": "ML 2 Results-20260903T053309Z-1-001.zip",
+      "source_member": "ML 2 Results/fault_aware_batch_split_table.csv"
+    },
+    {
+      "path": "results/experiments/report_ready_results_summary.txt",
+      "sha256": "6645ac6a6e7e8be79d2ae8d079486f7cbd2ce480a932b45f43e0827f068b131a",
+      "run": "ML3",
+      "source_archive": "ML 3 Results-20260903T053131Z-1-001.zip",
+      "source_member": "ML 3 Results/Five_Additional_Experiments/report_ready_results_summary.txt"
+    },
+    {
+      "path": "results/baseline/fault_test_predictions.csv",
+      "sha256": "37c81a709a9099d15c765d0a77ab867773f7312656f034943db5e400cb5aed76",
+      "run": "ML3",
+      "source_archive": "ML 3 Results-20260903T053131Z-1-001.zip",
+      "source_member": "ML 3 Results/fault_test_predictions.csv"
+    },
+    {
+      "path": "results/baseline/normal_test_predictions.csv",
+      "sha256": "2ee945249e7b119fe544707b1b6434234e3031ee528b91e1ea50ca9b722c4310",
+      "run": "ML3",
+      "source_archive": "ML 3 Results-20260903T053131Z-1-001.zip",
+      "source_member": "ML 3 Results/normal_test_predictions.csv"
+    },
+    {
+      "path": "results/experiments/experiment_3_fault_phase_predictions.csv",
+      "sha256": "f78bc2a5b881e83d7d36496aa1dd1d7725ad934146ad25d7deda26202ae7dab9",
+      "run": "ML3",
+      "source_archive": "ML 3 Results-20260903T053131Z-1-001.zip",
+      "source_member": "ML 3 Results/Five_Additional_Experiments/experiment_3_fault_phase_predictions.csv"
+    },
+    {
+      "path": "results/experiments/experiment_5_uncertainty_predictions.csv",
+      "sha256": "e73f9359a3fbcb9222ce2291a985ba1ea1d651e95bce5e9f074ba4a3aeb8f7ac",
+      "run": "ML3",
+      "source_archive": "ML 3 Results-20260903T053131Z-1-001.zip",
+      "source_member": "ML 3 Results/Five_Additional_Experiments/experiment_5_uncertainty_predictions.csv"
+    },
+    {
+      "path": "results/main/RESULTS_SUMMARY.txt",
+      "sha256": "d73fb5ceb97c3a837a240efe1a83b76f014b697bee9a4abe4d9cd82858eb402f",
+      "run": "ML4",
+      "source_archive": "ML 4 Results-20260903T053133Z-1-001.zip",
+      "source_member": "ML 4 Results/full_20260902_051727_063872_UTC/RESULTS_SUMMARY.txt"
     }
   ],
   "licence": "MIT for original code/documentation; data attribution in DATA_SOURCES.md",
@@ -765,5 +877,6 @@
     "notebook_changes": "Explanatory Markdown path only; every code cell preserved verbatim.",
     "numerical_results_changed": false,
     "models_retrained": false
-  }
+  },
+  "split_data_manifest": "data/splits/manifest.json"
 }

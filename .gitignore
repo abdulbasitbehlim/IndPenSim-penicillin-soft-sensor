@@ -1,8 +1,13 @@
-# Local input data; keep the instructions visible.
+# Optional full raw data remain local; the four reviewed split exports are tracked.
 /data/raw/*
 !/data/raw/README.md
 /data/splits/*
 !/data/splits/README.md
+!/data/splits/manifest.json
+!/data/splits/train_normal_60_batches.csv
+!/data/splits/validation_normal_15_batches.csv
+!/data/splits/test_normal_15_batches.csv
+!/data/splits/test_fault_10_batches.csv
 
 # New generated runs, trained pickle-based models and archives.
 /outputs/

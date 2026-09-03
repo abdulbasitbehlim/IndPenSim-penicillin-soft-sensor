@@ -1,13 +1,16 @@
-# Archived results
+# Saved result files
 
-[Complete figure gallery](../docs/FIGURES.md) · [Results explained](../docs/RESULTS_GUIDE.md)
+| Folder | Run | Purpose |
+|---|---|---|
+| [ml2/](ml2/README.md) | Earlier ML2 baseline | Original baseline tables and predictions from the earlier run. |
+| [baseline/](baseline/README.md) | ML3 baseline | Model selection, normal/fault test results, predictions and baseline figures. |
+| [experiments/](experiments/README.md) | ML3 extensions | All five diagnostic experiments, including detailed row-level outputs. |
+| [main/](main/README.md) | Full ML4 run | Fault-aware model comparison, complete-batch results, reliability diagnostics and figures. |
 
-- `baseline/`: initial model selection and fixed-batch Random Forest tests.
-- `experiments/`: five diagnostic experiments from `baseline.ipynb`.
-- `main/`: final full-run fault-inclusive study from `main.ipynb`.
+Each folder's README lists every result file and its purpose. Shared input CSVs are stored once in [data/splits/](../data/splits/README.md).
 
-All 14 original plots are in the gallery. Three baseline plots recovered from the executed notebook are in `baseline/figures/`. Six original notebook-display renderings are retained in `experiments/notebook_outputs/`, alongside the higher-resolution saved figures. [Figure provenance](../docs/figure_provenance.json) records the exact sources and checksums.
+ML2 and ML3 are separate saved runs, not independent datasets; their shared split exports are identical. Existing result values are preserved rather than overwritten with values from a different run.
 
-The CSVs and PNGs are copied from the supplied completed runs. Their numerical contents are not recalculated during repository preparation. New notebook runs go to timestamped directories under `outputs/` locally, or the configured output root in Colab.
+[All output figures](../docs/FIGURES.md) · [Interpretation and limitations](../docs/RESULTS_GUIDE.md)
 
-Read [the results guide](../docs/RESULTS_GUIDE.md) before comparing studies. Dataset attribution and derived-data licensing are in [DATA_SOURCES.md](../DATA_SOURCES.md).
+Duplicate ZIPs and trained joblib binaries are not included in the result folders. The notebooks regenerate trained models; the large original Random Forest binary exceeds the normal GitHub file limit. Source-data attribution is in [DATA_SOURCES.md](../DATA_SOURCES.md).

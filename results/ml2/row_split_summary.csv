@@ -1,0 +1,5 @@
+Data_Split,Number_of_Rows,Number_of_Batches,Target_Rows
+Train,67820,60,67820
+Validation,17510,15,17510
+Normal_Test,17080,15,17080
+Fault_Test,11525,10,11525

@@ -1,17 +1,14 @@
-# Study documentation
+# Documentation
 
-[Project overview](../README.md) · [Main notebook](../notebooks/main.ipynb) · [Baseline notebook](../notebooks/baseline.ipynb)
-
-| Document | Purpose |
+| File or folder | Purpose |
 |---|---|
-| [Complete figure gallery](FIGURES.md) | All 14 original plots, organised by study, with explanatory captions |
-| [Results guide](RESULTS_GUIDE.md) | Interpretation of metrics, warnings and uncertainty ranges |
-| [Reproducibility](REPRODUCIBILITY.md) | Environments, evaluation distinctions and source-preservation notes |
-| [Data instructions](../data/README.md) | Data source and input paths |
-| [Data sources and licences](../DATA_SOURCES.md) | Attribution, source publications and reuse boundaries |
-| [Notebook provenance](notebook_provenance.json) | Source hashes and documented setup adaptations |
-| [Figure provenance](figure_provenance.json) | Source notebooks, cell/output indices and image hashes |
+| [FIGURES.md](FIGURES.md) | Index of all 14 original plots. |
+| [figures/BASELINE.md](figures/BASELINE.md) | Baseline plots and captions. |
+| [figures/EXPERIMENTS.md](figures/EXPERIMENTS.md) | Five-experiment plots and captions. |
+| [figures/FAULT_INCLUSIVE.md](figures/FAULT_INCLUSIVE.md) | ML4 plots and captions. |
+| [RESULTS_GUIDE.md](RESULTS_GUIDE.md) | Metric definitions, main results and limitations. |
+| [REPRODUCIBILITY.md](REPRODUCIBILITY.md) | Notebook execution, environments and verification. |
+| [notebook_provenance.json](notebook_provenance.json) | Machine-readable source and result checksums used by the tests. |
+| [figure_provenance.json](figure_provenance.json) | Machine-readable image sources and checksums used by the tests. |
 
-For a quick introduction, read the overview, then the galleries in order: [baseline](figures/BASELINE.md), [five experiments](figures/EXPERIMENTS.md), and [fault-inclusive evaluation](figures/FAULT_INCLUSIVE.md).
-
-All numerical outputs come from the completed runs. Documentation and repository checks do not create new experimental evidence.
+[Project file guide](../README.md) · [Input CSVs](../data/splits/README.md) · [Result folders](../results/README.md)

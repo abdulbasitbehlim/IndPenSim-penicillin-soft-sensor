@@ -1,0 +1,241 @@
+{
+  "description": "Original process-data split CSV exports, preserved byte-for-byte from the supplied archives.",
+  "source_dataset": "https://doi.org/10.17632/pdnjz7zz5x.1",
+  "license": "CC BY 4.0",
+  "data_kind": "Process-column exports with Batch_ID and Data_Split; not the original full Raman CSV.",
+  "total_rows": 113935,
+  "total_batches": 100,
+  "column_names": [
+    "Time (h)",
+    "Aeration rate(Fg:L/h)",
+    "Agitator RPM(RPM:RPM)",
+    "Sugar feed rate(Fs:L/h)",
+    "Acid flow rate(Fa:L/h)",
+    "Base flow rate(Fb:L/h)",
+    "Heating/cooling water flow rate(Fc:L/h)",
+    "Heating water flow rate(Fh:L/h)",
+    "Water for injection/dilution(Fw:L/h)",
+    "Air head pressure(pressure:bar)",
+    "Dumped broth flow(Fremoved:L/h)",
+    "Substrate concentration(S:g/L)",
+    "Dissolved oxygen concentration(DO2:mg/L)",
+    "Penicillin concentration(P:g/L)",
+    "Vessel Volume(V:L)",
+    "Vessel Weight(Wt:Kg)",
+    "pH(pH:pH)",
+    "Temperature(T:K)",
+    "Generated heat(Q:kJ)",
+    "carbon dioxide percent in off-gas(CO2outgas:%)",
+    "PAA flow(Fpaa:PAA flow (L/h))",
+    "PAA concentration offline(PAA_offline:PAA (g L^{-1}))",
+    "Oil flow(Foil:L/hr)",
+    "NH_3 concentration off-line(NH3_offline:NH3 (g L^{-1}))",
+    "Oxygen Uptake Rate(OUR:(g min^{-1}))",
+    "Oxygen in percent in off-gas(O2:O2  (%))",
+    "Offline Penicillin concentration(P_offline:P(g L^{-1}))",
+    "Offline Biomass concentratio(X_offline:X(g L^{-1}))",
+    "Carbon evolution rate(CER:g/h)",
+    "Ammonia shots(NH3_shots:kgs)",
+    "Viscosity(Viscosity_offline:centPoise)",
+    "Fault reference(Fault_ref:Fault ref)",
+    "0 - Recipe driven 1 - Operator controlled(Control_ref:Control ref)",
+    "1- No Raman spec",
+    " 1-Raman spec recorded",
+    "2-PAT control(PAT_ref:PAT ref)",
+    "Batch reference(Batch_ref:Batch ref)",
+    "Batch ID",
+    "Fault flag",
+    "Batch_ID",
+    "Data_Split"
+  ],
+  "files": [
+    {
+      "file": "train_normal_60_batches.csv",
+      "bytes": 13126017,
+      "sha256": "b36a977a183ab0445aa4a58d57be25913c75bdc416e3e9754e0f2ebe42dea641",
+      "rows": 67820,
+      "columns": 41,
+      "batches": [
+        1,
+        4,
+        6,
+        7,
+        8,
+        10,
+        11,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        39,
+        41,
+        42,
+        44,
+        48,
+        49,
+        50,
+        51,
+        53,
+        54,
+        55,
+        57,
+        59,
+        61,
+        62,
+        63,
+        64,
+        65,
+        67,
+        72,
+        74,
+        75,
+        76,
+        79,
+        80,
+        81,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90
+      ],
+      "split_label": "Train",
+      "source_copies": [
+        {
+          "archive": "ML 2 Results-20260903T053309Z-1-001.zip",
+          "member": "ML 2 Results/Fault_Aware_Dataset_Splits/train_normal_60_batches.csv",
+          "sha256": "b36a977a183ab0445aa4a58d57be25913c75bdc416e3e9754e0f2ebe42dea641"
+        },
+        {
+          "archive": "ML 3 Results-20260903T053131Z-1-001.zip",
+          "member": "ML 3 Results/Fault_Aware_Dataset_Splits/train_normal_60_batches.csv",
+          "sha256": "b36a977a183ab0445aa4a58d57be25913c75bdc416e3e9754e0f2ebe42dea641"
+        }
+      ]
+    },
+    {
+      "file": "validation_normal_15_batches.csv",
+      "bytes": 3479224,
+      "sha256": "5d27a85a10feb13acd905c6733fccd2d560e0c23bf39dccb3cd29fdd7618ffdd",
+      "rows": 17510,
+      "columns": 41,
+      "batches": [
+        3,
+        12,
+        13,
+        15,
+        29,
+        40,
+        43,
+        52,
+        56,
+        58,
+        68,
+        70,
+        73,
+        78,
+        82
+      ],
+      "split_label": "Validation",
+      "source_copies": [
+        {
+          "archive": "ML 2 Results-20260903T053309Z-1-001.zip",
+          "member": "ML 2 Results/Fault_Aware_Dataset_Splits/validation_normal_15_batches.csv",
+          "sha256": "5d27a85a10feb13acd905c6733fccd2d560e0c23bf39dccb3cd29fdd7618ffdd"
+        },
+        {
+          "archive": "ML 3 Results-20260903T053131Z-1-001.zip",
+          "member": "ML 3 Results/Fault_Aware_Dataset_Splits/validation_normal_15_batches.csv",
+          "sha256": "5d27a85a10feb13acd905c6733fccd2d560e0c23bf39dccb3cd29fdd7618ffdd"
+        }
+      ]
+    },
+    {
+      "file": "test_normal_15_batches.csv",
+      "bytes": 3399215,
+      "sha256": "eea03b960a36bc5d99ffc1bbca55628f5eb8fbcab901006413d77d02a698d900",
+      "rows": 17080,
+      "columns": 41,
+      "batches": [
+        2,
+        5,
+        9,
+        14,
+        28,
+        34,
+        45,
+        46,
+        47,
+        60,
+        66,
+        69,
+        71,
+        77,
+        83
+      ],
+      "split_label": "Normal_Test",
+      "source_copies": [
+        {
+          "archive": "ML 2 Results-20260903T053309Z-1-001.zip",
+          "member": "ML 2 Results/Fault_Aware_Dataset_Splits/test_normal_15_batches.csv",
+          "sha256": "eea03b960a36bc5d99ffc1bbca55628f5eb8fbcab901006413d77d02a698d900"
+        },
+        {
+          "archive": "ML 3 Results-20260903T053131Z-1-001.zip",
+          "member": "ML 3 Results/Fault_Aware_Dataset_Splits/test_normal_15_batches.csv",
+          "sha256": "eea03b960a36bc5d99ffc1bbca55628f5eb8fbcab901006413d77d02a698d900"
+        }
+      ]
+    },
+    {
+      "file": "test_fault_10_batches.csv",
+      "bytes": 2276194,
+      "sha256": "feb8ff74b95434acb4b796b8685c2c572065061f034ff70e882e94abb0b67311",
+      "rows": 11525,
+      "columns": 41,
+      "batches": [
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ],
+      "split_label": "Fault_Test",
+      "source_copies": [
+        {
+          "archive": "ML 2 Results-20260903T053309Z-1-001.zip",
+          "member": "ML 2 Results/Fault_Aware_Dataset_Splits/test_fault_10_batches.csv",
+          "sha256": "feb8ff74b95434acb4b796b8685c2c572065061f034ff70e882e94abb0b67311"
+        },
+        {
+          "archive": "ML 3 Results-20260903T053131Z-1-001.zip",
+          "member": "ML 3 Results/Fault_Aware_Dataset_Splits/test_fault_10_batches.csv",
+          "sha256": "feb8ff74b95434acb4b796b8685c2c572065061f034ff70e882e94abb0b67311"
+        }
+      ]
+    }
+  ]
+}

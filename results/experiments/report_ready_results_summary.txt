@@ -1,0 +1,47 @@
+INDPENSIM FIVE ADDITIONAL EXPERIMENTS — AUTOMATIC RESULT SUMMARY
+
+Experiment 1 — Repeated complete-batch cross-validation
+Random Forest across 25 evaluations: RMSE mean 2.0504 g/L (SD 0.2858); R2 mean 0.9568 (SD 0.0126).
+
+Experiment 2 — Time/cumulative-feed ablation
+                       Variant     Dataset  Number_of_Features      MAE     RMSE       R2  Mean_Batch_MAE  Mean_Batch_RMSE  Median_Batch_R2  Negative_Batch_R2_Count  All_Features_RMSE  RMSE_Percent_Change_vs_All
+                  All features Normal Test                  36 1.324498 2.178573 0.946498        1.268657         1.762502         0.977892                        1           2.178573                    0.000000
+                  All features  Fault Test                  36 2.717231 4.321666 0.740202        2.664538         3.660486         0.479227                        4           4.321666                    0.000000
+                    Minus Time Normal Test                  35 1.325304 2.190396 0.945916        1.269054         1.781029         0.977674                        1           2.178573                    0.542684
+                    Minus Time  Fault Test                  35 2.656585 4.240568 0.749861        2.612914         3.593377         0.483770                        4           4.321666                   -1.876560
+         Minus cumulative feed Normal Test                  35 1.353734 2.213244 0.944782        1.298384         1.818603         0.976648                        1           2.178573                    1.591448
+         Minus cumulative feed  Fault Test                  35 2.882041 4.364616 0.735013        2.831573         3.781721         0.453057                        4           4.321666                    0.993808
+Minus Time and cumulative feed Normal Test                  34 1.493701 2.429751 0.933450        1.436457         2.064691         0.972988                        2           2.178573                   11.529455
+Minus Time and cumulative feed  Fault Test                  34 2.937673 4.427075 0.727374        2.895464         3.862675         0.438131                        5           4.321666                    2.439082
+
+Experiment 3 — Fault phase analysis
+        Fault_Phase  Rows  Batches      MAE     RMSE       R2  Mean_Batch_MAE  Mean_Batch_RMSE  Median_Batch_R2  Mean_Batch_MAE_Bootstrap_95_Lower  Mean_Batch_MAE_Bootstrap_95_Upper
+       Before fault  2090       10 0.111862 0.212047 0.994955        0.061096         0.090225         0.906673                           0.014405                           0.121480
+During fault window  5255       10 2.170026 3.584635 0.701032        1.485229         1.863217         0.902016                           0.649003                           2.633438
+        After fault  4180        9 4.707851 5.942940 0.532206        4.721080         5.151992        -4.600918                           2.767048                           6.896942
+
+Experiment 4 — Stronger comparator
+Best validation model by RMSE: HistGradientBoosting (RMSE 1.9438 g/L; R2 0.9635).
+               Model  Normal_RMSE  Fault_RMSE  Fault_to_Normal_RMSE_Ratio  Normal_R2  Fault_R2  R2_Drop_Normal_to_Fault
+        Dummy Median     9.646698    9.916074                    1.027924  -0.049009 -0.367767                 0.318758
+   Linear Regression     3.354897    5.448032                    1.623904   0.873124  0.587131                 0.285992
+       Random Forest     2.181325    4.320965                    1.980890   0.946363  0.740287                 0.206077
+HistGradientBoosting     2.030022    4.189910                    2.063972   0.953546  0.755802                 0.197744
+
+Experiment 5 — OOD and uncertainty
+ Horizon_h         Set  Batches  Flagged_Batches  OOD_Flag_Rate  Median_OOD_Score  Mean_OOD_Excess
+        12  Fault test       10                2       0.200000          0.439951        -0.059094
+        12 Normal test       15                0       0.000000          0.458440        -0.062516
+        24  Fault test       10                6       0.600000          0.580404         0.020419
+        24 Normal test       15                2       0.133333          0.433053        -0.064266
+        48  Fault test       10                6       0.600000          0.519181         0.009898
+        48 Normal test       15                1       0.066667          0.430271        -0.059548
+        72  Fault test       10                4       0.400000          0.490893        -0.055553
+        72 Normal test       15                0       0.000000          0.426475        -0.128008
+
+    Dataset      MAE     RMSE      R2  Target_Coverage  Empirical_Coverage  Mean_Interval_Width  Median_Interval_Width  Mean_Tree_SD
+Normal Test 1.391135 2.235225 0.94368              0.9            0.848946             5.033803               3.743961      1.068785
+ Fault Test 2.679744 4.235153 0.75050              0.9            0.704121             5.200023               4.283594      1.106876
+
+Spearman rank correlation, 24-h OOD score vs batch RMSE: 0.4615
+Spearman rank correlation, tree SD vs batch RMSE: 0.0300
