@@ -122,6 +122,32 @@ class DocumentationChecks(unittest.TestCase):
         self.assertFalse((ROOT / "docs/REPRODUCBILITY").exists())
         self.assertFalse((ROOT / "test/test_repository.py").exists())
 
+    def test_consistent_study_names_and_notebook_titles(self):
+        retired_label = re.compile(r"\bml[ _-]*[234]\b", re.IGNORECASE)
+        for path in ROOT.rglob("*.md"):
+            self.assertIsNone(retired_label.search(path.read_text(encoding="utf-8")), str(path))
+        self.assertEqual(
+            {path.name for path in (ROOT / "results").iterdir() if path.is_dir()},
+            {"baseline_earlier", "baseline", "experiments", "main"},
+        )
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        for filename, title in (("baseline", "Baseline ML"), ("main", "Main ML")):
+            notebook = json.loads((ROOT / f"notebooks/{filename}.ipynb").read_text(encoding="utf-8"))
+            self.assertEqual(notebook["metadata"]["title"], title)
+            self.assertTrue("".join(notebook["cells"][0]["source"]).startswith("# " + title + " — "))
+            self.assertIn(f"| {title} | [{filename}.ipynb](notebooks/{filename}.ipynb) |", readme)
+            for cell in notebook["cells"]:
+                if cell["cell_type"] == "markdown":
+                    self.assertIsNone(retired_label.search("".join(cell["source"])), filename)
+
+    def test_current_notebook_checksums_match_provenance(self):
+        provenance = json.loads((ROOT / "docs/notebook_provenance.json").read_text(encoding="utf-8"))
+        for record in provenance["notebooks"]:
+            path = ROOT / record["path"]
+            notebook = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), record["repository_file_sha256"])
+            self.assertEqual(notebook["metadata"]["title"], record["display_name"])
+
     def test_local_heading_links_resolve(self):
         for path in ROOT.rglob("*.md"):
             for target in re.findall(r"\]\(([^)]+)\)", path.read_text(encoding="utf-8")):

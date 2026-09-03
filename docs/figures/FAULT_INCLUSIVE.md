@@ -1,6 +1,6 @@
-# Fault-inclusive soft-sensor results
+# Main ML — fault-aware soft-sensor results
 
-[All figures](../FIGURES.md) · [Baseline](BASELINE.md) · [Five experiments](EXPERIMENTS.md) · [Main notebook](../../notebooks/main.ipynb)
+[All figures](../FIGURES.md) · [Baseline ML](BASELINE.md) · [Five experiments](EXPERIMENTS.md) · [Main ML notebook](../../notebooks/main.ipynb)
 
 Two HGB regressors are compared. The normal-only model learns from normal batches; the fault-inclusive model also learns from other fault batches, with a fault weight multiplier of three. Each test batch is excluded from fitting its own predictions.
 

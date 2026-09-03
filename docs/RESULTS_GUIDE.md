@@ -6,12 +6,12 @@ The CSVs are outputs of completed runs. Opening a notebook or passing the reposi
 
 | Results | Meaning |
 |---|---|
-| [ML2](../results/ml2/README.md) | Earlier baseline run, retained separately. |
-| [ML3 baseline](../results/baseline/README.md) | Fixed-split model selection and the selected Random Forest's normal/fault tests. |
-| [ML3 experiments](../results/experiments/README.md) | Five diagnostic studies of generalisation and reliability. |
-| [ML4](../results/main/README.md) | Normal-only versus fault-aware HGB under complete-batch evaluation. |
+| [Baseline ML (earlier run)](../results/baseline_earlier/README.md) | Earlier baseline run, retained separately. |
+| [Baseline ML](../results/baseline/README.md) | Fixed-split model selection and the selected Random Forest's normal/fault tests. |
+| [Baseline ML experiments](../results/experiments/README.md) | Five diagnostic studies of generalisation and reliability. |
+| [Main ML](../results/main/README.md) | Normal-only versus fault-aware HGB under complete-batch evaluation. |
 
-ML2 and ML3 use the same split data; they are not independent validation datasets. Do not substitute one run's predictions for another run's metric tables.
+The earlier and current Baseline ML runs use the same split data; they are not independent validation datasets. Do not substitute one run's predictions for another run's metric tables.
 
 ## Metric meanings
 
@@ -23,7 +23,7 @@ ML2 and ML3 use the same split data; they are not independent validation dataset
 | Pooled result | Calculated over all time rows together; longer batches contribute more rows. |
 | Mean batch result | Calculated for each batch first, then averaged with equal batch weight. |
 
-## ML4 concentration results
+## Main ML concentration results
 
 Source: [cross_validated_overall_metrics.csv](../results/main/cross_validated_overall_metrics.csv).
 
@@ -43,12 +43,12 @@ The saved files use the label Fault-aware HGB. Some figure captions use fault-in
 1. **Repeated batch CV:** 25 scores come from five repeats over the same 90 normal batches. Their spread describes split sensitivity, not freedom from bias. Earlier feature-usability screening was not fully nested within these repeats.
 2. **Time/feed ablation:** compare against the ablation's own all-input reference. The refit's row order differs from the initial RF final fit, which can slightly change a seeded tree model. Removing these two variables does not remove every possible batch-progress proxy; feature importance is not causation.
 3. **Fault-phase errors:** the plot uses equal-batch mean MAE: 0.061, 1.485 and 4.721 g/L before, within and after the recorded fault window. Pooled row MAEs are 0.112, 2.170 and 4.708 g/L. Only nine batches contribute an after-window segment. The first-to-last window can include inactive gaps, and a cleared flag is not proof of recovery.
-4. **Model comparison:** the figure shows pooled RMSE and pooled R², not mean batch RMSE. The earlier HGB comparator uses different settings from ML4; rankings also depend on the metric chosen.
-5. **Early OOD:** the heatmap shows score minus the horizon-specific threshold. The 24-hour scatter plot uses the raw OOD score. For batches 91 and 100, warnings at 24 h occur after the recorded onset at 20 h. These prefix-summary detectors differ from ML4's row-level detector.
+4. **Model comparison:** the figure shows pooled RMSE and pooled R², not mean batch RMSE. The earlier HGB comparator uses different settings from Main ML; rankings also depend on the metric chosen.
+5. **Early OOD:** the heatmap shows score minus the horizon-specific threshold. The 24-hour scatter plot uses the raw OOD score. For batches 91 and 100, warnings at 24 h occur after the recorded onset at 20 h. These prefix-summary detectors differ from Main ML's row-level detector.
 
 [Annotated figures](FIGURES.md) link each plot to its result files. The original automatically generated text summaries are retained as outputs, not as replacements for these distinctions.
 
-## ML4 warning scores and uncertainty
+## Main ML warning scores and uncertainty
 
 At a risk-score threshold of 0.5, warnings occurred on 13.86% of normal rows, 4.64% of pre-onset fault-batch rows and 49.26% of onset/after rows. The AUC of 0.8434 compares pre-onset with onset/after rows within fault batches; it is not an all-normal-versus-all-fault-batches AUC.
 

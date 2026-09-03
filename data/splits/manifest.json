@@ -122,12 +122,14 @@
         {
           "archive": "ML 2 Results-20260903T053309Z-1-001.zip",
           "member": "ML 2 Results/Fault_Aware_Dataset_Splits/train_normal_60_batches.csv",
-          "sha256": "b36a977a183ab0445aa4a58d57be25913c75bdc416e3e9754e0f2ebe42dea641"
+          "sha256": "b36a977a183ab0445aa4a58d57be25913c75bdc416e3e9754e0f2ebe42dea641",
+          "run": "baseline_earlier"
         },
         {
           "archive": "ML 3 Results-20260903T053131Z-1-001.zip",
           "member": "ML 3 Results/Fault_Aware_Dataset_Splits/train_normal_60_batches.csv",
-          "sha256": "b36a977a183ab0445aa4a58d57be25913c75bdc416e3e9754e0f2ebe42dea641"
+          "sha256": "b36a977a183ab0445aa4a58d57be25913c75bdc416e3e9754e0f2ebe42dea641",
+          "run": "baseline"
         }
       ]
     },
@@ -159,12 +161,14 @@
         {
           "archive": "ML 2 Results-20260903T053309Z-1-001.zip",
           "member": "ML 2 Results/Fault_Aware_Dataset_Splits/validation_normal_15_batches.csv",
-          "sha256": "5d27a85a10feb13acd905c6733fccd2d560e0c23bf39dccb3cd29fdd7618ffdd"
+          "sha256": "5d27a85a10feb13acd905c6733fccd2d560e0c23bf39dccb3cd29fdd7618ffdd",
+          "run": "baseline_earlier"
         },
         {
           "archive": "ML 3 Results-20260903T053131Z-1-001.zip",
           "member": "ML 3 Results/Fault_Aware_Dataset_Splits/validation_normal_15_batches.csv",
-          "sha256": "5d27a85a10feb13acd905c6733fccd2d560e0c23bf39dccb3cd29fdd7618ffdd"
+          "sha256": "5d27a85a10feb13acd905c6733fccd2d560e0c23bf39dccb3cd29fdd7618ffdd",
+          "run": "baseline"
         }
       ]
     },
@@ -196,12 +200,14 @@
         {
           "archive": "ML 2 Results-20260903T053309Z-1-001.zip",
           "member": "ML 2 Results/Fault_Aware_Dataset_Splits/test_normal_15_batches.csv",
-          "sha256": "eea03b960a36bc5d99ffc1bbca55628f5eb8fbcab901006413d77d02a698d900"
+          "sha256": "eea03b960a36bc5d99ffc1bbca55628f5eb8fbcab901006413d77d02a698d900",
+          "run": "baseline_earlier"
         },
         {
           "archive": "ML 3 Results-20260903T053131Z-1-001.zip",
           "member": "ML 3 Results/Fault_Aware_Dataset_Splits/test_normal_15_batches.csv",
-          "sha256": "eea03b960a36bc5d99ffc1bbca55628f5eb8fbcab901006413d77d02a698d900"
+          "sha256": "eea03b960a36bc5d99ffc1bbca55628f5eb8fbcab901006413d77d02a698d900",
+          "run": "baseline"
         }
       ]
     },
@@ -228,14 +234,17 @@
         {
           "archive": "ML 2 Results-20260903T053309Z-1-001.zip",
           "member": "ML 2 Results/Fault_Aware_Dataset_Splits/test_fault_10_batches.csv",
-          "sha256": "feb8ff74b95434acb4b796b8685c2c572065061f034ff70e882e94abb0b67311"
+          "sha256": "feb8ff74b95434acb4b796b8685c2c572065061f034ff70e882e94abb0b67311",
+          "run": "baseline_earlier"
         },
         {
           "archive": "ML 3 Results-20260903T053131Z-1-001.zip",
           "member": "ML 3 Results/Fault_Aware_Dataset_Splits/test_fault_10_batches.csv",
-          "sha256": "feb8ff74b95434acb4b796b8685c2c572065061f034ff70e882e94abb0b67311"
+          "sha256": "feb8ff74b95434acb4b796b8685c2c572065061f034ff70e882e94abb0b67311",
+          "run": "baseline"
         }
       ]
     }
-  ]
+  ],
+  "study": "Baseline ML"
 }

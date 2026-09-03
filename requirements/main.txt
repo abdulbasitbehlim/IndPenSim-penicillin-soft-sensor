@@ -1,4 +1,4 @@
-# Python 3.12 recommended. These are the pins in the supplied main.ipynb setup.
+# Main ML (main.ipynb). Python 3.12 recommended; pins match the notebook setup.
 # The saved run metadata separately records NumPy, pandas and scikit-learn.
 numpy==2.3.5
 scipy==1.17.0

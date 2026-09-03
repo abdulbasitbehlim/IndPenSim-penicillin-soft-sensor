@@ -1,6 +1,6 @@
 # Process-data split CSVs
 
-These four files are unmodified exports from the earlier batch-wise split. The ML2 and ML3 archives contain byte-identical copies, so they are stored once here.
+These four files are unmodified exports from the earlier batch-wise split. The two Baseline ML result archives contain byte-identical copies, so they are stored once here.
 
 | File | Rows | Batches | Original purpose |
 |---|---:|---:|---|
@@ -14,6 +14,6 @@ The files cover 113,935 observations from 100 batches without overlap between th
 
 The target is Penicillin concentration(P:g/L). Batch_ID identifies the reconstructed complete batch; Data_Split records the original group. Fault reference and Fault flag remain diagnostic columns, not direct concentration-prediction inputs.
 
-These are process-only exports, not the original full Raman dataset. In ML4, all four files are combined before creating five normal folds and ten leave-one-fault-batch-out evaluations. Their old train/validation/test labels do not determine ML4's folds.
+These are process-only exports, not the original full Raman dataset. In Main ML, all four files are combined before creating five normal folds and ten leave-one-fault-batch-out evaluations. Their old train/validation/test labels do not determine Main ML's folds.
 
 [Input compatibility](../README.md) · [Dataset source and CC BY 4.0 licence](../../DATA_SOURCES.md)

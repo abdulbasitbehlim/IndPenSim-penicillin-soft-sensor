@@ -1,4 +1,4 @@
-# ML3 — original baseline results
+# Baseline ML — model selection and fixed-split results
 
 Outputs of the initial normal-trained comparison in [baseline.ipynb](../../notebooks/baseline.ipynb). The notebook compares Linear Regression and Random Forest with a Dummy baseline, selects Random Forest, and tests it on normal and fault batches.
 
@@ -20,4 +20,4 @@ Outputs of the initial normal-trained comparison in [baseline.ipynb](../../noteb
 
 The four input CSVs are in [data/splits/](../../data/splits/README.md). The notebook's five follow-up experiments are in [results/experiments/](../experiments/README.md).
 
-[Annotated baseline figures](../../docs/figures/BASELINE.md) · [Earlier ML2 run](../ml2/README.md)
+[Annotated Baseline ML figures](../../docs/figures/BASELINE.md) · [Earlier Baseline ML run](../baseline_earlier/README.md)

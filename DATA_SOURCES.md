@@ -14,7 +14,7 @@ The original dataset is licensed under [Creative Commons Attribution 4.0 Interna
 | [results/](results/README.md) | Derived model predictions, metrics and plots from the supplied completed runs. These are analysis outputs, not newly collected experimental measurements. |
 | [data/raw/](data/raw/README.md) | Location for a separately downloaded original full CSV; the full process-plus-Raman file was not present in the supplied result archives. |
 
-The four split CSVs are preserved byte-for-byte from the supplied ML2/ML3 exports. Their transformations relative to the original dataset are process-column selection, batch identification, split labelling and partitioning. Checksums and exact column names are recorded in [data/splits/manifest.json](data/splits/manifest.json).
+The four split CSVs are preserved byte-for-byte from the supplied Baseline ML exports. Their transformations relative to the original dataset are process-column selection, batch identification, split labelling and partitioning. Checksums and exact column names are recorded in [data/splits/manifest.json](data/splits/manifest.json).
 
 ## Licence scope
 

@@ -1,6 +1,6 @@
-# ML2 — earlier baseline run
+# Baseline ML — earlier saved run
 
-These are the original outputs supplied in the ML2 results archive. They are kept separate from the later ML3 baseline outputs. A separate ML2 notebook is not included in this repository.
+These are the original outputs from the earlier Baseline ML run. They are kept separate from the results associated with the current baseline notebook. A separate notebook for this earlier run was not supplied.
 
 | File | Purpose |
 |---|---|
@@ -15,6 +15,6 @@ These are the original outputs supplied in the ML2 results archive. They are kep
 | [row_split_summary.csv](row_split_summary.csv) | Number of rows assigned to each of the four data groups. |
 | [model_information.json](model_information.json) | Selected model, feature list, random seed, batch lists and final summary metrics. |
 
-The shared input exports are in [data/splits/](../../data/splits/README.md). The ML2 and ML3 splits are identical; minor numerical differences between their saved outputs do not represent a new dataset.
+The shared input exports are in [data/splits/](../../data/splits/README.md). Both Baseline ML runs use identical split exports; minor numerical differences between their saved outputs do not represent a new dataset.
 
-[Later baseline results](../baseline/README.md) · [All result folders](../README.md)
+[Current Baseline ML results](../baseline/README.md) · [All result folders](../README.md)
