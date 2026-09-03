@@ -1,0 +1,38 @@
+INDPENSIM BATCH-HELD-OUT FAULT-AWARE SOFT SENSOR
+======================================================
+
+Run mode: full
+Target: current penicillin concentration (not future forecasting)
+
+Regression results
+Condition           Model   Rows  Batches      MAE     RMSE       R2
+   Normal Normal-only HGB 102410       90 1.209512 1.980606 0.960722
+   Normal Fault-aware HGB 102410       90 1.206332 1.982976 0.960628
+    Fault Normal-only HGB  11525       10 2.076290 3.194582 0.858042
+    Fault Fault-aware HGB  11525       10 1.440536 2.564362 0.908527
+
+Paired complete-batch comparison
+Condition  Batches  Mean_RMSE_Difference_Aware_Minus_Normal_Only  Median_RMSE_Difference_Aware_Minus_Normal_Only  Bootstrap_95pct_Lower  Bootstrap_95pct_Upper  Batches_Improved  Proportion_Batches_Improved
+   Normal       90                                      0.017495                                        0.014148              -0.062340               0.102031                41                     0.455556
+    Fault       10                                     -0.706314                                       -0.502429              -1.284357              -0.219367                 8                     0.800000
+
+Fault-risk warning results
+                                             Measure    Value   Rows
+       Normal-row warning rate at probability >= 0.5 0.138551 102410
+Fault-affected-row sensitivity at probability >= 0.5 0.492634   9435
+         Pre-onset warning rate within fault batches 0.046411   2090
+   Fault-phase ROC AUC within held-out fault batches 0.843440  11525
+
+Descriptive interval radii
+{
+  "normal": 3.039774721921969,
+  "fault": 3.116448487819369,
+  "coverage_target": 0.9
+}
+
+How to interpret this run
+- A negative aware-minus-normal-only RMSE difference favours the fault-aware model.
+- The bootstrap interval is across complete batches, not individual time rows.
+- Fault-risk and OOD are reliability warnings; neither proves a physical fault.
+- The empirical interval is descriptive and is not a formal safety guarantee.
+- Only a full run covering all 5 normal folds and all 10 fault folds is reportable.

@@ -138,12 +138,12 @@ class RepositoryChecks(unittest.TestCase):
     def test_pooled_metric_arithmetic(self):
         overall = read_csv("results/main/cross_validated_overall_metrics.csv")
         self.assertEqual(len(overall), 4)
-        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        results_guide = (ROOT / "docs/RESULTS_GUIDE.md").read_text(encoding="utf-8")
         for row in overall:
             recomputed = metrics(self.by_condition[row["Condition"]], self.model_columns[row["Model"]])
             for name, value in recomputed.items():
                 self.assertTrue(math.isclose(value, float(row[name]), abs_tol=1e-9, rel_tol=1e-9))
-                self.assertIn(f"{float(row[name]):.4f}", readme)
+                self.assertIn(f"{float(row[name]):.4f}", results_guide)
 
     def test_individual_batch_metric_arithmetic(self):
         batch_metrics = read_csv("results/main/cross_validated_batch_metrics.csv")

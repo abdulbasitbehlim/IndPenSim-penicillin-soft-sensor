@@ -1,62 +1,77 @@
-# Reproducibility and notebook preparation
+# Running and checking the notebooks
 
-## Canonical notebooks
+## Choose the notebook and input
 
-`notebooks/baseline.ipynb` contains the original normal-trained baseline and five diagnostic experiments. `notebooks/main.ipynb` contains the later fault-inclusive analysis. Keep these studies separate when reporting results.
+| Notebook | Study | Input |
+|---|---|---|
+| [main.ipynb](../notebooks/main.ipynb) | ML4 fault-aware comparison | The included [four split CSVs](../data/splits/README.md), or the original full CSV. |
+| [baseline.ipynb](../notebooks/baseline.ipynb) | ML3 baseline and five experiments | The original concatenated CSV downloaded from the [IndPenSim record](https://doi.org/10.17632/pdnjz7zz5x.1), in original batch order. |
 
-The supplied `model.ipynb` is now `notebooks/baseline.ipynb`; the supplied `ML_4.ipynb` is now `notebooks/main.ipynb`. The original uploaded files were not modified. These simpler repository filenames do not represent new experiments. [notebook_provenance.json](notebook_provenance.json) records original file hashes, per-cell source hashes and the allowed setup changes. Original cell identifiers are retained in repository metadata for traceability; the displayed cell numbers may differ because setup guidance was added.
+ML2's earlier outputs are preserved in [results/ml2/](../results/ml2/README.md); a separate ML2 notebook was not supplied.
 
-## Changes made for this repository
+## Local Jupyter
 
-- Renamed the repository notebooks to `baseline.ipynb` and `main.ipynb`, with matching requirement files and output-directory labels. The final-study archive is now in `results/main/`; the original filenames and content hashes remain recorded for traceability.
-- Cleared saved execution outputs and execution counts. The original uploaded notebooks remain the evidence-bearing executed copies; checked-in CSVs and PNGs preserve selected completed-run outputs.
-- Removed private Drive locations and stale notebook UI/execution metadata.
-- Added a dependency check/install cell to the earlier notebook and made the `main.ipynb` installer conditional. Colab may install its required versions; local Jupyter asks the user to install through the environment's requirements file.
-- Made Google Drive mounting optional and skipped it outside Colab.
-- Replaced fixed output folders with fresh UTC-timestamped directories to avoid overwriting previous runs.
-- Used a common example data location in Colab and a repository-relative local data location.
-- Made the final ZIP-download cell safe to run outside Colab; downloading is off by default, while the ZIP is still created.
-- Clarified introductory Markdown and removed a stale claim that the uploaded `main.ipynb` file had no prefilled outputs. Its repository copy now genuinely has none.
+Use a separate Python 3.12 environment for each notebook. From the repository root, create and activate an environment, install the selected requirements, then open Jupyter:
 
-No feature-engineering, split, model-fitting, weighting, prediction, metric, bootstrap or OOD calculation was rewritten. All non-setup code cells are checked byte-for-byte at the source-text level against their recorded originals. This packaging step did not rerun the full experiments or replace their saved numerical results.
+~~~bash
+python -m venv .venv-main
+~~~
 
-The subsequent documentation maintenance corrected repository paths and explanatory Markdown links, restored original notebook-output figures, and repaired test discovery. Every notebook code cell was preserved. The [figure provenance record](figure_provenance.json) identifies each original plot and its source notebook output. These maintenance changes do not constitute a new experimental run.
+On macOS/Linux, activate it with:
 
-## Environments
+~~~bash
+source .venv-main/bin/activate
+~~~
 
-Use Python 3.12 for a new local environment. The earlier run recorded NumPy 2.1.3, pandas 2.2.3 and scikit-learn 1.6.1. Its plotting, SciPy and joblib versions were not recorded. The additional pins in `requirements/baseline.txt` are explicit support choices for this package, not a recovered historical environment lock.
+On Windows PowerShell, activate it with:
 
-The supplied `main.ipynb` installation cell pins NumPy 2.3.5, SciPy 1.17.0, pandas 2.2.3, scikit-learn 1.8.0, matplotlib 3.10.8, seaborn 0.13.2 and joblib 1.5.3. Those pins are retained in `requirements/main.txt`. The saved numerical-run metadata records Python 3.13.15 and the NumPy/pandas/scikit-learn versions. A prior local scientific-cell rerun used Python 3.12.13 and agreed on six numeric result files within an absolute tolerance of 2 × 10⁻¹⁵. That was numerical reproduction on the same data, not independent validation.
+~~~powershell
+.venv-main\Scripts\Activate.ps1
+~~~
 
-Do not run both studies in one already-imported Colab session after changing packages. Restart with a fresh session/environment, then execute from the beginning. Record the environment of any new run; a successful installation alone is not evidence that results have reproduced.
+Then run:
 
-## Data and paths
+~~~bash
+python -m pip install -r requirements/main.txt
+python -m pip install "jupyterlab>=4,<5"
+python -m jupyterlab notebooks/main.ipynb
+~~~
 
-`baseline.ipynb` expects the original concatenated CSV in original batch order. `main.ipynb` accepts either that CSV or all four earlier process-split exports with verified batch IDs. Consult [data/README.md](../data/README.md).
+In main.ipynb's path-setting cell, replace the DATA_PATH assignment with:
 
-Both path cells support these optional environment variables:
+~~~python
+DATA_PATH = str(PROJECT_ROOT / "data" / "splits")
+~~~
 
-- `INDPENSIM_DATA_PATH`: path to the source CSV, or the complete split directory for `main.ipynb`.
-- `INDPENSIM_OUTPUT_ROOT`: parent directory for new run folders.
+Use RUN_MODE = "full" for all five normal folds and ten fault-batch holdouts. Smoke mode is only an installation check.
 
-Editing `DATA_PATH` or `OUTPUT_ROOT` directly in the cell is equally valid. Do not set the output root to a checked-in `results/` folder.
+For the earlier study, create a separate environment, install [requirements/baseline.txt](../requirements/baseline.txt), open baseline.ipynb, and set DATA_PATH to the original full CSV. Do not install both requirement sets into the same environment.
 
-## Scientific distinctions to preserve
+## Google Colab
 
-1. The original RF fixed test is not the same training/evaluation design as the final HGB study. The HGB comparator in the earlier notebook uses 300 iterations and minimum leaf size 20; `main.ipynb` uses 180 iterations and minimum leaf size 30.
-2. The original RF final fit concatenates training rows and validation rows. The ablation refit uses the same development batches in batch-sorted row order. The same random seed samples row positions, so its all-input result differs slightly. Use the ablation's own reference.
-3. Earlier repeated CV has five repeats of five normal folds. `main.ipynb` has one set of five normal folds plus ten fault-batch holdouts. Neither is 25 independent fermentation datasets.
-4. Held-out fault predictions use the other nine fault batches in training. A related fault mechanism may still be present in those batches.
-5. The risk classifier's positive label includes all rows from the first recorded fault onset onward, even after the last active reference. It differs from the retrospective before/window/after partition.
-6. The model saved after `main.ipynb` evaluation is fitted on all 100 labelled batches. Its in-sample diagnostics must not be substituted for held-out performance.
-7. Fault-inclusive training changes both data exposure and batch weighting. The observed gain cannot be assigned to one component without an additional controlled ablation.
+Open the chosen notebook in a fresh Colab session. Set the data path to the actual CSV or, for ML4, to a folder containing all four included split CSVs. Google Drive mounting is optional. If package installation requests a runtime restart, restart before executing from the beginning.
 
-## Checks supplied with this repository
+## Outputs and recorded environments
 
-```bash
+New runs write to fresh folders under outputs/baseline/ or outputs/main/. Keep these separate from the archived [results/](../results/README.md). The notebooks save the numerical tables, plots, metadata and trained model.
+
+The saved ML4 metadata records Python 3.13.15 and its scientific package versions. The baseline run recorded NumPy 2.1.3, pandas 2.2.3 and scikit-learn 1.6.1, but not a complete historical environment lock. The separate requirements files support reproduction; exact agreement must be checked after running.
+
+## Evaluation boundaries
+
+- The four included CSVs preserve the old 60/15/15/10 split. ML4 recombines them and creates its own complete-batch folds.
+- ML4 tests normal batches in five folds and fault batches one at a time, learning from the other nine fault batches. This is not verified leave-one-fault-mechanism-out testing.
+- The earlier repeated CV is five repeats of five normal folds, not 25 independent datasets.
+- The earlier RF test and ML4's HGB comparison use different training/evaluation designs. Compare methods within the same experiment.
+- Adding fault examples and increasing their weight occur together in ML4. The current comparison does not isolate the contribution of each change.
+- The final model is refitted on all 100 labelled batches after evaluation. Its deployment diagnostics are not another held-out test.
+
+## Automated checks
+
+~~~bash
 python -m unittest discover -s tests -v
-```
+~~~
 
-These standard-library tests run without data downloads or the heavy scientific stack. They parse and compile each code cell, check notebook cleanliness and scientific-source hashes, recompute the main metrics from the archived held-out prediction CSV, check fold membership and inspect the repository's required files. Passing is a useful packaging check, not a complete audit of the scientific workflow.
+The checks verify preserved notebook calculations, CSV integrity, split membership, agreement between input targets and held-out predictions, metric arithmetic, figure files and documentation links. They require no model training or external download.
 
-For a new research result, run the notebook in its documented environment, retain the timestamped outputs, verify all expected batch counts and compare the new CSVs with the archived reference. Never overwrite archived results merely to make a comparison match. No full baseline rerun in the newly chosen support environment is claimed by this package.
+The scientific notebook code and original result values remain unchanged by repository organisation. Machine-readable verification records are indexed in [docs/README.md](README.md). Passing checks confirm repository consistency, not publication readiness or independent scientific validation.
