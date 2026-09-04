@@ -9,7 +9,7 @@ The CSVs are outputs of completed runs. Opening a notebook or passing the reposi
 | [Baseline ML (earlier run)](../results/baseline_earlier/README.md) | Earlier baseline run, retained separately. |
 | [Baseline ML](../results/baseline/README.md) | Fixed-split model selection and the selected Random Forest's normal/fault tests. |
 | [Baseline ML experiments](../results/experiments/README.md) | Five diagnostic studies of generalisation and reliability. |
-| [Main ML](../results/main/README.md) | Normal-only versus fault-aware HGB under complete-batch evaluation. |
+| [Main ML](../results/main/README.md) | Normal-only versus fault-inclusive HGB under complete-batch evaluation. |
 
 The earlier and current Baseline ML runs use the same split data; they are not independent validation datasets. Do not substitute one run's predictions for another run's metric tables.
 
@@ -30,13 +30,13 @@ Source: [cross_validated_overall_metrics.csv](../results/main/cross_validated_ov
 | Condition | Model | MAE (g/L) | RMSE (g/L) | R² |
 |---|---|---:|---:|---:|
 | Normal | Normal-only HGB | 1.2095 | 1.9806 | 0.9607 |
-| Normal | Fault-aware HGB | 1.2063 | 1.9830 | 0.9606 |
+| Normal | Fault-inclusive HGB | 1.2063 | 1.9830 | 0.9606 |
 | Fault | Normal-only HGB | 2.0763 | 3.1946 | 0.8580 |
-| Fault | Fault-aware HGB | 1.4405 | 2.5644 | 0.9085 |
+| Fault | Fault-inclusive HGB | 1.4405 | 2.5644 | 0.9085 |
 
-Fault-aware training reduced pooled fault RMSE by 19.73%, with little change in normal RMSE. Eight of ten fault batches improved. Batch 100 remained poorly predicted: RMSE 6.631 g/L and R² −2.4837.
+Fault-inclusive training reduced pooled fault RMSE by 19.73%, with little change in normal RMSE. Eight of ten fault batches improved. Batch 100 remained poorly predicted: RMSE 6.631 g/L and R² −2.4837.
 
-The saved files use the label Fault-aware HGB. Some figure captions use fault-inclusive HGB to describe the same strategy. Neither name means every fault is predicted correctly.
+Fault-inclusive HGB is the model trained with both normal and fault examples, excluding each held-out batch. The saved files retain their original internal identifiers for reproducibility. The terminology does not mean every fault is predicted correctly.
 
 ## Reading the five experiment plots
 

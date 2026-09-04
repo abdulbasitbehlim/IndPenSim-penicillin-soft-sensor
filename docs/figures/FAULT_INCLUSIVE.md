@@ -1,4 +1,4 @@
-# Main ML — fault-aware soft-sensor results
+# Main ML — fault-inclusive soft-sensor results
 
 [All figures](../FIGURES.md) · [Baseline ML](BASELINE.md) · [Five experiments](EXPERIMENTS.md) · [Main ML notebook](../../notebooks/main.ipynb)
 
@@ -19,7 +19,7 @@ Normal evaluation uses five folds with 18 normal test batches each. Fault evalua
 
 - Fault RMSE falls by **19.73%**, with little change in normal RMSE.
 - Bars pool held-out observation rows; they are not means across independent repetitions.
-- The original label **Fault-aware HGB** refers to the same model called **fault-inclusive HGB** here.
+- Fault-inclusive describes the training strategy, not a guarantee of accurate prediction for every fault.
 
 Source: [overall metrics](../../results/main/cross_validated_overall_metrics.csv).
 

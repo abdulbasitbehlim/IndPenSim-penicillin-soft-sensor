@@ -9,7 +9,7 @@ Code, split input data and saved results for estimating penicillin concentration
 | Study | Notebook | Purpose |
 |---|---|---|
 | Baseline ML | [baseline.ipynb](notebooks/baseline.ipynb) | Compares Linear Regression and Random Forest, selects the baseline model, and runs the five additional experiments. |
-| Main ML | [main.ipynb](notebooks/main.ipynb) | Compares normal-only and fault-aware HGB using complete-batch validation; adds fault-risk, OOD and empirical error-range outputs. |
+| Main ML | [main.ipynb](notebooks/main.ipynb) | Compares normal-only and fault-inclusive HGB using complete-batch validation; adds fault-risk, OOD and empirical error-range outputs. |
 
 ## Input CSV files
 
@@ -42,11 +42,19 @@ Open a folder's README for the purpose of every result file.
 | [results/experiments/](results/experiments/README.md) | Baseline ML's five experiments: repeated batch CV, time/feed ablation, fault phases, model comparison and OOD/uncertainty analysis. |
 | [results/main/](results/main/README.md) | Main ML's full-run predictions, batch metrics, bootstrap comparison, warning scores and figures. |
 
+## Fault-batch RMSE
+
+![Batch RMSE for normal-only and fault-inclusive HGB on held-out fault batches 91–100](results/main/figure_2_fault_batch_rmse.png)
+
+Each pair compares the models on a fault batch excluded from fitting its predictions. Shorter bars mean smaller errors. The fault-inclusive model improves RMSE for eight of ten fault batches; batch 100 remains the most difficult.
+
+[Per-batch results](results/main/cross_validated_batch_metrics.csv) · [Figure explanations](docs/figures/FAULT_INCLUSIVE.md)
+
 ## Supporting files
 
 | File or folder | Purpose |
 |---|---|
-| [docs/FIGURES.md](docs/FIGURES.md) | Gallery of all 14 original plots, with captions. |
+| [docs/FIGURES.md](docs/FIGURES.md) | Gallery of all 14 plots, with captions. |
 | [docs/RESULTS_GUIDE.md](docs/RESULTS_GUIDE.md) | Explains the metrics, main results and scientific limitations. |
 | [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md) | Instructions for running the notebooks and checking the results. |
 | [docs/README.md](docs/README.md) | Index of the supporting documentation and verification records. |

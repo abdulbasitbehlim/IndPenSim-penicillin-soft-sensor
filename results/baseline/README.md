@@ -10,8 +10,8 @@ Outputs of the initial normal-trained comparison in [baseline.ipynb](../../noteb
 | [fault_test_metrics_by_batch.csv](fault_test_metrics_by_batch.csv) | Prediction errors for each of the ten fault test batches. |
 | [normal_test_predictions.csv](normal_test_predictions.csv) | Actual and predicted concentrations for the normal test rows. |
 | [fault_test_predictions.csv](fault_test_predictions.csv) | Actual and predicted concentrations plus fault diagnostics for the fault test rows. |
-| [fault_aware_batch_split.json](fault_aware_batch_split.json) | Batch-ID lists for the four original data groups. |
-| [fault_aware_batch_split_table.csv](fault_aware_batch_split_table.csv) | Batch-by-batch split assignment and audit information. |
+| [Batch split definitions (JSON)](fault_aware_batch_split.json) | Batch-ID lists for the four original data groups. |
+| [Batch split audit (CSV)](fault_aware_batch_split_table.csv) | Batch-by-batch split assignment and audit information. |
 | [row_split_summary.csv](row_split_summary.csv) | Number of rows assigned to each of the four data groups. |
 | [model_information.json](model_information.json) | Selected model, feature list, random seed, batch lists and final summary metrics. |
 | [figures/training_batch_trajectories.png](figures/training_batch_trajectories.png) | Penicillin concentration trajectories from the training batches. |

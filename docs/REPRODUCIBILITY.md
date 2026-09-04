@@ -4,7 +4,7 @@
 
 | Notebook | Study | Input |
 |---|---|---|
-| [main.ipynb](../notebooks/main.ipynb) | Main ML fault-aware comparison | The included [four split CSVs](../data/splits/README.md), or the original full CSV. |
+| [main.ipynb](../notebooks/main.ipynb) | Main ML fault-inclusive comparison | The included [four split CSVs](../data/splits/README.md), or the original full CSV. |
 | [baseline.ipynb](../notebooks/baseline.ipynb) | Baseline ML model selection and five experiments | The original concatenated CSV downloaded from the [IndPenSim record](https://doi.org/10.17632/pdnjz7zz5x.1), in original batch order. |
 
 The earlier Baseline ML outputs are preserved in [results/baseline_earlier/](../results/baseline_earlier/README.md); a separate notebook for that earlier run was not supplied.
