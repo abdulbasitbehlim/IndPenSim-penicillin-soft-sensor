@@ -29,6 +29,8 @@ Source: [overall metrics](../../results/main/cross_validated_overall_metrics.csv
 
 **Chart type:** grouped bar chart, with a pair for each fault batch.
 
+Figure F2 was regenerated from the saved batch metrics on 4 September 2026. It has no plot title, uses **Batch ID** on the x-axis and **Batch RMSE (g/L)** on the y-axis, and displays **Normal-only HGB** and **Fault-inclusive HGB** in the legend. Only the presentation changed; the stored model identifiers and numerical results are unchanged.
+
 - Eight batches improve in RMSE; **92 and 93 worsen**.
 - Batch 100 retains the largest error, despite a small reduction.
 - The pooled improvement does not establish that every fault is handled correctly.

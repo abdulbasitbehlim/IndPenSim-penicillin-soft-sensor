@@ -2,7 +2,7 @@
 
 [Project overview](../README.md) · [Results guide](RESULTS_GUIDE.md) · [Figure provenance](figure_provenance.json)
 
-The gallery contains **14 distinct plots** from the two completed studies. Every plot is an original output, not a redrawn illustration. Six experiment plots also have a separate notebook-display rendering: both versions are retained, giving **20 PNG files** in total.
+The gallery contains **14 distinct plots** from the two completed studies. Figure F2 was regenerated from the unchanged saved results on 4 September 2026 to update its presentation labels; all other plots retain their original renderings. Six experiment plots also have a separate notebook-display rendering: both versions are retained, giving **20 PNG files** in total.
 
 ## Baseline ML: learning from normal batches
 
@@ -43,8 +43,8 @@ The gallery contains **14 distinct plots** from the two completed studies. Every
 
 - MAE and RMSE use g/L; lower is better. R² is not an accuracy percentage.
 - Early OOD plots and final risk-score plots describe different methods. Neither proves a physical fault.
-- Original labels are preserved. Captions qualify ambiguous labels without changing the images.
+- Figure F2 has no plot title, uses **Batch ID** and **Batch RMSE (g/L)** as axis labels, and labels its series **Normal-only HGB** and **Fault-inclusive HGB**. Other figures retain their original labels.
 - The studies use different evaluation designs; do not pool them as independent repetitions of one experiment.
-- Every canonical image and retained display variant is linked in the gallery. [figure_provenance.json](figure_provenance.json) records their SHA-256 hashes and original source locations.
+- Every canonical image and retained display variant is linked in the gallery. [figure_provenance.json](figure_provenance.json) records current hashes, original source locations and the F2 presentation revision.
 
 Retain the [IndPenSim attribution and data-derived material licence](../DATA_SOURCES.md) when reusing figures.

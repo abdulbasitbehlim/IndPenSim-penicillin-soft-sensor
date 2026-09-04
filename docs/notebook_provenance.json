@@ -385,7 +385,7 @@
       "path": "notebooks/main.ipynb",
       "original_filename": "ML_4.ipynb",
       "original_file_sha256": "ba72cd6a2e90abb9c94e5ab38e1c2654197b765807491e58dceafdddb65277f9",
-      "repository_file_sha256": "ae33e4583f686ebb5b2b739e4cf4ca477807de7ac04493f1d7c618ab041fd654",
+      "repository_file_sha256": "367aeed7aa90bc26eb57b1cfb5d29a5c68c3186818ad7374b97516e5abc3b151",
       "original_cells": 28,
       "repository_cells": 28,
       "code_cells": [
@@ -465,9 +465,35 @@
           "original_cell_index": 14,
           "repository_cell_id": "ml4-source-014",
           "original_source_sha256": "4ef009360131682ef0ee31b48448a4ba8cea228dc610529635db469c38141340",
-          "repository_source_sha256": "4ef009360131682ef0ee31b48448a4ba8cea228dc610529635db469c38141340",
-          "scientific_source_unchanged": true,
-          "setup_change": null
+          "repository_source_sha256": "7fffc5d5fe7482eb7c85917ef98d253320db99633923a24f9a7f4771eb774aed",
+          "scientific_source_unchanged": false,
+          "setup_change": null,
+          "presentation_change": {
+            "date": "2026-09-04",
+            "figure": "results/main/figure_2_fault_batch_rmse.png",
+            "description": "Figure 2 presentation only: no plot title, Batch ID x-axis, Batch RMSE (g/L) y-axis, and Normal-only HGB / Fault-inclusive HGB legend without a heading.",
+            "model_retrained": false,
+            "numeric_inputs": [
+              {
+                "path": "results/main/cross_validated_overall_metrics.csv",
+                "sha256": "4adacef149d3d02eab61642d54b21d029715bf604a2095826ad04f3dd05bad0b"
+              },
+              {
+                "path": "results/main/cross_validated_batch_metrics.csv",
+                "sha256": "e17ebe24e1dd30cf7c6089ade22908b4b24d840519c695995f9979aad9d03db1"
+              },
+              {
+                "path": "results/main/cross_validated_predictions.csv",
+                "sha256": "7603a50c6fc5056a0b1911e096eea08b6a5235c26297dec1d9a6e8868e1802e2"
+              }
+            ],
+            "replacements": [
+              {
+                "before": "        sns.barplot(data=fault_batch, x=BATCH_COL, y=\"RMSE\", hue=\"Model\")\n        plt.ylabel(\"Batch RMSE (g/L)\")\n        plt.title(\"Leave-one-fault-batch-out error\")\n",
+                "after": "        axis = sns.barplot(data=fault_batch, x=BATCH_COL, y=\"RMSE\", hue=\"Model\")\n        plt.xlabel(\"Batch ID\")\n        plt.ylabel(\"Batch RMSE (g/L)\")\n        handles, labels = axis.get_legend_handles_labels()\n        display_labels = [\n            \"Fault-inclusive HGB\" if label == \"Fault-aware HGB\" else label\n            for label in labels\n        ]\n        axis.legend(handles, display_labels, title=None)\n"
+              }
+            ]
+          }
         },
         {
           "original_cell_index": 16,
@@ -725,8 +751,39 @@
     },
     {
       "path": "results/main/figure_2_fault_batch_rmse.png",
-      "sha256": "06118dc4297fe2805dd27e75e685fb1f74c2b4ee1060c8f9c97604e4c11da83d",
-      "run": "main_full"
+      "sha256": "b1878185966afe79fe2d1256c030861ed459133b8420877f3d0dad8b7b7f5725",
+      "run": "main_full",
+      "original_sha256": "06118dc4297fe2805dd27e75e685fb1f74c2b4ee1060c8f9c97604e4c11da83d",
+      "presentation_revision": {
+        "date": "2026-09-04",
+        "description": "Figure 2 presentation only: no plot title, Batch ID x-axis, Batch RMSE (g/L) y-axis, and Normal-only HGB / Fault-inclusive HGB legend without a heading.",
+        "model_retrained": false,
+        "numeric_results_changed": false,
+        "source_notebook": "notebooks/main.ipynb",
+        "source_cell_id": "ml4-source-014",
+        "source_cell_sha256": "7fffc5d5fe7482eb7c85917ef98d253320db99633923a24f9a7f4771eb774aed",
+        "numeric_inputs": [
+          {
+            "path": "results/main/cross_validated_overall_metrics.csv",
+            "sha256": "4adacef149d3d02eab61642d54b21d029715bf604a2095826ad04f3dd05bad0b"
+          },
+          {
+            "path": "results/main/cross_validated_batch_metrics.csv",
+            "sha256": "e17ebe24e1dd30cf7c6089ade22908b4b24d840519c695995f9979aad9d03db1"
+          },
+          {
+            "path": "results/main/cross_validated_predictions.csv",
+            "sha256": "7603a50c6fc5056a0b1911e096eea08b6a5235c26297dec1d9a6e8868e1802e2"
+          }
+        ],
+        "software": {
+          "matplotlib": "3.10.8",
+          "seaborn": "0.13.2",
+          "pandas": "2.2.3"
+        },
+        "previous_figure_sha256": "06118dc4297fe2805dd27e75e685fb1f74c2b4ee1060c8f9c97604e4c11da83d",
+        "previous_commit": "f3001cc830b4313c60d212f8ae005a635c1c7324"
+      }
     },
     {
       "path": "results/main/figure_3_fault_actual_vs_predicted.png",

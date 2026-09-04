@@ -92,16 +92,23 @@ class RepositoryChecks(unittest.TestCase):
                 compile("".join(cell["source"]), f"{item['path']}:{cell['id']}", "exec")
 
     def test_original_scientific_sources_are_preserved(self):
-        # Setup paths may legitimately be edited by a user. Scientific changes
-        # should be versioned and described rather than silently changing the
-        # historical snapshot. This check intentionally catches such changes.
+        # Setup paths may be edited. Approved presentation edits must reverse
+        # exactly to the original source, so modelling changes remain caught.
         for item in self.provenance["notebooks"]:
             notebook = json.loads((ROOT / item["path"]).read_text(encoding="utf-8"))
             by_id = {cell["id"]: cell for cell in notebook["cells"]}
             preserved_count = 0
             for record in item["code_cells"]:
                 cell = by_id[record["repository_cell_id"]]
-                if record["scientific_source_unchanged"]:
+                if record.get("presentation_change"):
+                    source = "".join(cell["source"])
+                    self.assertEqual(digest(source), record["repository_source_sha256"])
+                    for change in reversed(record["presentation_change"]["replacements"]):
+                        self.assertEqual(source.count(change["after"]), 1)
+                        source = source.replace(change["after"], change["before"], 1)
+                    self.assertEqual(digest(source), record["original_source_sha256"])
+                    preserved_count += 1
+                elif record["scientific_source_unchanged"]:
                     self.assertEqual(digest("".join(cell["source"])), record["original_source_sha256"])
                     preserved_count += 1
                 else:
@@ -111,6 +118,19 @@ class RepositoryChecks(unittest.TestCase):
     def test_archived_results_have_not_been_replaced(self):
         for item in self.provenance["archived_results"]:
             self.assertEqual(digest((ROOT / item["path"]).read_bytes()), item["sha256"], item["path"])
+
+    def test_fault_batch_figure_presentation_revision_is_traceable(self):
+        notebook_record = next(r for r in self.provenance["notebooks"] if r["path"] == "notebooks/main.ipynb")
+        cell_record = next(r for r in notebook_record["code_cells"] if r["repository_cell_id"] == "ml4-source-014")
+        change = cell_record["presentation_change"]
+        self.assertEqual(change["figure"], "results/main/figure_2_fault_batch_rmse.png")
+        self.assertFalse(change["model_retrained"])
+        for item in change["numeric_inputs"]:
+            self.assertEqual(digest((ROOT / item["path"]).read_bytes()), item["sha256"])
+        figures = json.loads((ROOT / "docs/figure_provenance.json").read_text())["figures"]
+        figure = next(r for r in figures if r["id"] == "F2")
+        self.assertEqual(figure["presentation_revision"]["source_cell_sha256"], cell_record["repository_source_sha256"])
+        self.assertEqual(figure["sha256"], digest((ROOT / change["figure"]).read_bytes()))
 
     def test_prediction_rows_and_held_out_membership(self):
         self.assertEqual(len(self.predictions), 113935)
