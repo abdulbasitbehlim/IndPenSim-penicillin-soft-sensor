@@ -36,6 +36,19 @@ jobs:
       - name: Build organized figure archive
         run: python figures/build_figure_archive.py
 
+      - name: Preserve original result-file link
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('results/main/README.md')
+          text = p.read_text(encoding='utf-8')
+          old = '[figure_2_fault_batch_rmse.png](../../figures/publishable_images/F2_fault_batch_rmse.png)'
+          new = '[figure_2_fault_batch_rmse.png](figure_2_fault_batch_rmse.png)'
+          if old in text:
+              text = text.replace(old, new, 1)
+          p.write_text(text, encoding='utf-8')
+          PY
+
       - name: Validate image counts and DPI
         run: |
           python - <<'PY'
