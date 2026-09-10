@@ -2,6 +2,8 @@
 
 [Project overview](../README.md) · [Results guide](RESULTS_GUIDE.md) · [Figure provenance](figure_provenance.json)
 
+For manuscript preparation, see the organized [high-resolution figure archive](../figures/README.md). Original result PNGs remain unchanged in `results/`.
+
 The gallery contains **14 distinct plots** from the two completed studies. Figure F2 was regenerated from the unchanged saved results on 4 September 2026 to update its presentation labels; all other plots retain their original renderings. Six experiment plots also have a separate notebook-display rendering: both versions are retained, giving **20 PNG files** in total.
 
 ## Baseline ML: learning from normal batches

@@ -8,3 +8,4 @@ data/splits/*.csv -text
 *.yml text eol=lf
 *.cff text eol=lf
 *.png binary
+*.pptx binary

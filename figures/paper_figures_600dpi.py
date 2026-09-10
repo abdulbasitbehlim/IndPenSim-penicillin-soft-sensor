@@ -176,7 +176,7 @@ def add_history_features(frame: pd.DataFrame) -> pd.DataFrame:
 
 def figure_b3() -> Path:
     info = json.loads((ROOT / "results/baseline/model_information.json").read_text())
-    features = info["model_features"]
+    features = info["features"]
     train = read_csv("data/splits/train_normal_60_batches.csv")
     val = read_csv("data/splits/validation_normal_15_batches.csv")
     development = pd.concat([train, val], ignore_index=True)
@@ -281,8 +281,8 @@ def figure_e3() -> Path:
         ax.plot(x, ys, color=LIGHT_GREY, linewidth=1.0, marker="o", markersize=2.8, alpha=0.85, zorder=1)
     lookup = overall.set_index("Fault_Phase")
     means = np.array([float(lookup.loc[p, "Mean_Batch_MAE"]) for p in phases])
-    lo = np.array([float(lookup.loc[p, "Bootstrap_95pct_Lower_Mean_Batch_MAE"]) for p in phases])
-    hi = np.array([float(lookup.loc[p, "Bootstrap_95pct_Upper_Mean_Batch_MAE"]) for p in phases])
+    lo = np.array([float(lookup.loc[p, "Mean_Batch_MAE_Bootstrap_95_Lower"]) for p in phases])
+    hi = np.array([float(lookup.loc[p, "Mean_Batch_MAE_Bootstrap_95_Upper"]) for p in phases])
     yerr = np.vstack([means-lo, hi-means])
     ax.errorbar(x, means, yerr=yerr, color=ORANGE, marker="o", markersize=5.5,
                 capsize=4, linewidth=2.0, label="Equal-batch mean ± 95% bootstrap CI", zorder=4)

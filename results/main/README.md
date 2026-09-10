@@ -20,7 +20,7 @@ Saved outputs of the full Main ML run: five normal-batch folds and ten leave-one
 
 ## Error for each held-out fault batch
 
-![Batch RMSE for normal-only and fault-inclusive HGB on held-out fault batches 91–100](figure_2_fault_batch_rmse.png)
+![Batch RMSE for normal-only and fault-inclusive HGB on held-out fault batches 91–100](../../figures/publishable_images/F2_fault_batch_rmse.png)
 
 Each pair shows the two models' errors for one held-out fault batch. Lower RMSE is better; fault-inclusive training improves eight of ten batches but does not resolve the large error in batch 100.
 

@@ -44,11 +44,24 @@ Open a folder's README for the purpose of every result file.
 
 ## Fault-batch RMSE
 
-![Batch RMSE for normal-only and fault-inclusive HGB on held-out fault batches 91–100](results/main/figure_2_fault_batch_rmse.png)
+![Batch RMSE for normal-only and fault-inclusive HGB on held-out fault batches 91–100](figures/publishable_images/F2_fault_batch_rmse.png)
 
 Each pair compares the models on a fault batch excluded from fitting its predictions. Shorter bars mean smaller errors. The fault-inclusive model improves RMSE for eight of ten fault batches; batch 100 remains the most difficult.
 
 [Per-batch results](results/main/cross_validated_batch_metrics.csv) · [Figure explanations](docs/figures/FAULT_INCLUSIVE.md)
+
+
+## Figure archive
+
+The original result images are preserved in `results/`. Paper-ready versions are organized separately.
+
+| Figure set | Purpose |
+|---|---|
+| [images_300_dpi](figures/images_300_dpi/) | Organized copies of the previous/canonical outputs. |
+| [images_600_dpi_original_code_output](figures/images_600_dpi_original_code_output/) | 600-DPI original-output appearance plus PowerPoint. |
+| [publishable_images](figures/publishable_images/) | Publication-ready 600-DPI figures and PowerPoints; used for the README preview. |
+| [paper_figures_600dpi.py](figures/paper_figures_600dpi.py) | Reproducible Python generator. |
+| [image_manifest.csv](figures/image_manifest.csv) | Dimensions, DPI and checksums. |
 
 ## Supporting files
 
