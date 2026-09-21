@@ -6,6 +6,9 @@ Code, split input data and saved results for estimating penicillin concentration
 
 [![Repository checks](https://github.com/abdulbasitbehlim/IndPenSim-penicillin-soft-sensor/actions/workflows/checks.yml/badge.svg)](https://github.com/abdulbasitbehlim/IndPenSim-penicillin-soft-sensor/actions/workflows/checks.yml)
 
+**Public repository:** [abdulbasitbehlim/IndPenSim-penicillin-soft-sensor](https://github.com/abdulbasitbehlim/IndPenSim-penicillin-soft-sensor)  
+**Researcher ORCID:** [0009-0003-5240-5413](https://orcid.org/0009-0003-5240-5413)
+
 ## Notebooks
 
 | Study | Notebook | Purpose |
