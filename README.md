@@ -60,6 +60,19 @@ The analysis uses the **IndPenSim industrial-scale penicillin fermentation bench
 | Prediction target | **Current penicillin concentration (g/L)** |
 | Main evaluation unit | **Complete fermentation batch** |
 
+### Included dataset splits
+
+The repository tracks the exact batch-wise data splits used for the analyses:
+
+- [`data/splits/train_normal_60_batches.csv`](data/splits/train_normal_60_batches.csv) — 60 normal training batches
+- [`data/splits/validation_normal_15_batches.csv`](data/splits/validation_normal_15_batches.csv) — 15 normal validation batches
+- [`data/splits/test_normal_15_batches.csv`](data/splits/test_normal_15_batches.csv) — 15 held-out normal test batches
+- [`data/splits/test_fault_10_batches.csv`](data/splits/test_fault_10_batches.csv) — 10 held-out fault/deviation batches
+
+The corresponding split metadata and provenance are documented in
+[`data/splits/README.md`](data/splits/README.md) and
+[`data/splits/manifest.json`](data/splits/manifest.json).
+
 IndPenSim was developed as a benchmark for process monitoring, control, PAT/QbD studies and machine-learning research in industrial-scale fermentation.
 
 ---
