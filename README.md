@@ -121,6 +121,12 @@ flowchart LR
 | Auxiliary reliability tools | Fault-risk classifier, Isolation Forest OOD detector, empirical error ranges |
 
 ---
+## Analysis notebooks
+
+| Study | Notebook |
+|---|---|
+| Baseline ML | [baseline.ipynb](notebooks/baseline.ipynb) |
+| Main ML | [main.ipynb](notebooks/main.ipynb) |
 
 ## Main results
 
