@@ -1,35 +1,27 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite the associated research paper."
-title: "IndPenSim penicillin soft sensor"
-authors:
-  - family-names: Behlim
-    given-names: Abdul Basit
-    orcid: "https://orcid.org/0009-0003-5240-5413"
-    affiliations:
-      - name: Department of Industrial Biotechnology, Gujarat Biotechnology University
-  - family-names: Tilewale
-    given-names: Atharva
-    orcid: "https://orcid.org/0009-0003-9802-8158"
-    affiliations:
-      - name: Department of Industrial Biotechnology, Gujarat Biotechnology University
-  - family-names: Patel
-    given-names: Dhaval
-    orcid: "https://orcid.org/0000-0002-1811-2057"
-    affiliations:
-      - name: Department of Industrial Biotechnology, Gujarat Biotechnology University
-repository-code: "https://github.com/abdulbasitbehlim/IndPenSim-penicillin-soft-sensor"
-license: MIT
-doi: "10.64898/2026.09.21.753176"
+message: "If you use this repository, please cite the associated bioRxiv preprint."
+title: "IndPenSim Penicillin Soft Sensor"
 type: software
-version: "1.0"
-date-released: "2026-09-29"
-keywords:
-  - machine-learning
-  - bioprocess
-  - fermentation
-  - soft-sensor
-  - digital-twin
-  - indpensim
-  - process-monitoring
-  - python
-license: "MIT"
+authors:
+  - family-names: "Behlim"
+    given-names: "Abdul Basit"
+  - family-names: "Tilewale"
+    given-names: "Atharva"
+  - family-names: "Patel"
+    given-names: "Dhaval"
+repository-code: "https://github.com/abdulbasitbehlim/IndPenSim-penicillin-soft-sensor"
+url: "https://github.com/abdulbasitbehlim/IndPenSim-penicillin-soft-sensor"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Behlim"
+      given-names: "Abdul Basit"
+    - family-names: "Tilewale"
+      given-names: "Atharva"
+    - family-names: "Patel"
+      given-names: "Dhaval"
+  title: "Towards Digital-Twin-Enabled Bioprocess Monitoring: Fault-Inclusive Soft Sensing of Penicillin Concentration Under Process Deviations"
+  journal: "bioRxiv"
+  year: 2026
+  doi: "10.64898/2026.09.21.753176"
+  url: "https://doi.org/10.64898/2026.09.21.753176"
