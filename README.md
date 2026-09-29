@@ -15,7 +15,8 @@
 
 **Authors:** Abdul Basit Behlim · Atharva Tilewale · Dhaval Patel
 
-[📄 Read the paper](https://doi.org/10.64898/2026.09.21.753176) · [🧪 IndPenSim benchmark](https://github.com/Lemniscabio/IndPenSim)
+[📄 Read the paper](https://doi.org/10.64898/2026.09.21.753176) 
+
 
 </div>
 
