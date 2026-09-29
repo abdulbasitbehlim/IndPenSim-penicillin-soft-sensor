@@ -4,7 +4,7 @@ Code, split input data and saved results for estimating penicillin concentration
 
 **Keywords:** `machine-learning` · `bioprocess` · `fermentation` · `soft-sensor` · `digital-twin` · `indpensim` · `process-monitoring` · `python`
 
-**Paper:** https://doi.org/10.64898/2026.09.21.753176
+**Pre-Print Paper:** https://doi.org/10.64898/2026.09.21.753176
 
 [![Repository checks](https://github.com/abdulbasitbehlim/IndPenSim-penicillin-soft-sensor/actions/workflows/checks.yml/badge.svg)](https://github.com/abdulbasitbehlim/IndPenSim-penicillin-soft-sensor/actions/workflows/checks.yml)
 
