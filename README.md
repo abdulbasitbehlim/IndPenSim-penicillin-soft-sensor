@@ -8,7 +8,7 @@
 [![bioRxiv](https://img.shields.io/badge/bioRxiv-Preprint-b31b1b?style=for-the-badge)](https://doi.org/10.64898/2026.09.21.753176)
 [![Python](https://img.shields.io/badge/Python-Machine%20Learning-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-Soft%20Sensor-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
-[![Dataset](https://img.shields.io/badge/Dataset-IndPenSim-2ea44f?style=for-the-badge)]
+[Dataset](https://img.shields.io/badge/Dataset-IndPenSim-2ea44f?style=for-the-badge)
 
 **Research code accompanying the bioRxiv preprint:**  
 **“Towards Digital-Twin-Enabled Bioprocess Monitoring: Fault-Inclusive Soft Sensing of Penicillin Concentration Under Process Deviations”**
