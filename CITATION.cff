@@ -1,19 +1,34 @@
 cff-version: 1.2.0
-message: "Please cite this software, the commit or release used, and the original IndPenSim dataset when using this work."
-type: software
-title: "IndPenSim Penicillin Soft Sensor: Batch-Held-Out Evaluation"
-version: 0.1.0
-repository-code: "https://github.com/abdulbasitbehlim/IndPenSim-penicillin-soft-sensor"
-url: "https://github.com/abdulbasitbehlim/IndPenSim-penicillin-soft-sensor"
+message: "If you use this software, please cite the associated research paper."
+title: "IndPenSim penicillin soft sensor"
 authors:
   - family-names: Behlim
     given-names: Abdul Basit
-abstract: "Two research notebooks for current penicillin-concentration estimation using simulated IndPenSim batches: a normal-trained baseline with five diagnostic experiments, and a normal-only versus fault-inclusive gradient-boosting evaluation."
-license: MIT
+    orcid: "https://orcid.org/0009-0003-5240-5413"
+    affiliations:
+      - name: Department of Industrial Biotechnology, Gujarat Biotechnology University
+  - family-names: Tilewale
+    given-names: Atharva
+    orcid: "https://orcid.org/0009-0003-9802-8158"
+    affiliations:
+      - name: Department of Industrial Biotechnology, Gujarat Biotechnology University
+  - family-names: Patel
+    given-names: Dhaval
+    orcid: "https://orcid.org/0000-0002-1811-2057"
+    affiliations:
+      - name: Department of Industrial Biotechnology, Gujarat Biotechnology University
+repository-code: "https://github.com/abdulbasitbehlim/IndPenSim-penicillin-soft-sensor"
+doi: "10.64898/2026.09.21.753176"
+type: software
+version: "1.0"
+date-released: "2026-09-29"
 keywords:
-  - IndPenSim
-  - penicillin
-  - soft sensor
-  - batch validation
+  - machine-learning
+  - bioprocess
   - fermentation
-# Data and derived-data licensing are described separately in DATA_SOURCES.md.
+  - soft-sensor
+  - digital-twin
+  - indpensim
+  - process-monitoring
+  - python
+license: "MIT"
