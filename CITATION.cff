@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use this repository, please cite the associated bioRxiv preprint."
 title: "IndPenSim Penicillin Soft Sensor"
 type: software
+license: MIT
 authors:
   - family-names: "Behlim"
     given-names: "Abdul Basit"
